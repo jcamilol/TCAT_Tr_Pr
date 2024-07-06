@@ -1,1 +1,1 @@
-En este repositorio registraremos los anvances que llevemos a cabo en el desarrollo del trabajo de profundización del curso de Teoría de Categorías (2024-1), que hemos llamado ``Dos aproximaciones equivalentes a la noción de haz".
+En este repositorio registraremos los anvances que llevemos a cabo en el desarrollo del trabajo de profundización del curso de Teoría de Categorías (2024-1), que hemos llamado "Dos aproximaciones equivalentes a la noción de haz".
