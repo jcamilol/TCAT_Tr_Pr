@@ -1,0 +1,72 @@
+\documentclass[letterpaper]{article} %único necesario para: crear documento, hacer título, espacios, interlineado
+
+\usepackage{vmargin} %necesario para ajustar las márgenes con \setmargins
+%\usepackage{euler} %usa la fuente "euler" para las ecuaciones
+\usepackage{amsfonts} %para Z estilizada
+\usepackage{pifont} %para más estilos de viñetas
+\usepackage{amsmath} %necesario para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 equation*
+\usepackage{amsthm} %necesario para proof enviroment
+\usepackage{dsfont} %alguna letra caligráfica
+\usepackage{tipa} %Epsilon bonito
+\usepackage{graphicx} %para manejar imágenes
+\usepackage{wrapfig} %para imágenes en modo "wrap"
+\usepackage{lipsum} %para usar el texto de relleno
+\usepackage{bold-extra}
+\usepackage{fancyhdr}
+\usepackage[symbol]{footmisc}
+
+\newtheorem{theorem}{Teorema}
+\numberwithin{theorem}{section}
+\newtheorem{definition}{Definición}
+\numberwithin{definition}{section}
+\newtheorem{lemma}{Lema}
+\newtheorem{exercise}{Ejercicio}[section]
+\renewcommand*{\proofname}{\textbf{Prueba}} %Muestra "prueba" en lugar de "proof"
+\renewcommand\refname{Referencias}
+
+%letterpaper: 21.59cm x 27.94cm
+\setmargins{2.8 cm} %margen izquierdo
+{1.5 cm} %margen Superior
+{15.5cm} %anchura del texto
+{23cm} %altura del texto
+{0pt} %altura de los encabezados
+{1.5cm} %espacio entre el texto y los encabezados
+{5 cm} %altura del pie de página
+{1 cm} %espacio entre el texto y el pie de página
+
+\addtolength{\skip\footins}{2pc}
+
+%\pagenumbering{gobble} %Quita la numeración de las páginas
+\renewcommand{\baselinestretch}{1.5} %Aumenta el interlineado a n veces el automático
+\relpenalty=9999 %Evita que se rompan las ecuaciones en el cambio de renglón
+\binoppenalty=9999
+\renewenvironment{abstract}
+{\small
+   \list{}{%
+      \setlength{\leftmargin}{1.4cm}% <---------- CHANGE HERE
+      \setlength{\rightmargin}{\leftmargin}%
+   }%
+   \item\relax}
+{\endlist}
+
+\renewcommand{\abstractname}{\textsc{Resumen}}
+
+\date{}
+
+\begin{document}
+
+   \input{title.tex}
+   \vspace{1cm}
+
+   \begin{abstract}
+      \input{abstract}
+        
+      \vspace{0.3cm}
+      \textsc{Palabras Clave.} Integral de Lebesgue; teoremas de Levi; funciones escalonadas; funciones superiores; funciones Lebesgue-integrables.
+   \end{abstract}
+
+   \vspace{1cm}
+
+   \section{Sección 1}
+
+\end{document}
