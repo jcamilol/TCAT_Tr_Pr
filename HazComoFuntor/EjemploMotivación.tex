@@ -1,0 +1,9 @@
+Una constante en el quehacer matemático es el tránsito entre aspectos locales y aspectos globales. Consideremos un ejemplo enmarcado en el área de la topología. Sean $X$ un espacio topológico y $U$ un subconjunto abierto de $X$, al cual dotamos con un cubrimiento $\left\lbrace U_i\right\rbrace_{i\in I}$ de subconjuntos abiertos de $U$. Una función continua $f:U\to \mathbb{R}$ se presenta como una herramienta para entender globalmente el conjunto $U$, y fácilmente nos permite pasar al conocimiento local de $U$ en el siguiente sentido:
+\begin{itemize}
+   \item[\textbf{(P1)}] Si $V\stackrel{ab}\subseteq U$ entonces $f|_V:V\to\mathbb{R}$ es también una función continua. 
+\end{itemize}
+De forma recíproca, gracias al lema de pegado (Teorema \ref{tma:lemaPegado}), $f$ nos permite pasar de un apropiado conocimiento local de $U$ a un conocimiento global, en la siguiente forma:
+\begin{itemize}
+   \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$. Si $f_i:f|_{U_i}:U_i\to\mathbb{R}$ es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
+\end{itemize}
+Las propiedades \textbf{(P1)} y \textbf{(P2)} pueden ser enunciadas en lenguaje categórico y generalizadas fuera del ámbito de la topología gracias a ello. Para esto primero introducimos la categoría $\mathcal{O}(X)$.
