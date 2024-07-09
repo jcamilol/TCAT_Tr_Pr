@@ -6,4 +6,16 @@ De forma recíproca, gracias al lema de pegado (Teorema \ref{tma:lemaPegado}), $
 \begin{itemize}
    \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$. Si $f_i:f|_{U_i}:U_i\to\mathbb{R}$ es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
 \end{itemize}
-Las propiedades \textbf{(P1)} y \textbf{(P2)} pueden ser enunciadas en lenguaje categórico y generalizadas fuera del ámbito de la topología gracias a ello. Para esto primero introducimos la categoría $\mathcal{O}(X)$.
+Las propiedades \textbf{(P1)} y \textbf{(P2)} pueden ser capturadas en lenguaje categórico. Para esto, consideremos la categoría $\mathcal{O}(X)$ que tiene como objetos los subconjuntos abiertos de $X$, y en la cual, dados $U,V\in \mathcal{O}(X)$, hay una flecha de $V$ en $U$ si y solo si $V\subseteq U$; dicha flecha en $\mathcal{O}(X)$ (que será la única de $V$ en $U$) la representamos igualmente mediante ``$V\subseteq U$". Ahora, para cada $U\in\mathcal{O}(X)$ definimos el conjunto $CU$ de todas las funciones reales continuas sobre U:
+$$
+CU:=\left\lbrace f:U\to\mathbb{R}\mid f \text{ es continua}\right\rbrace,
+$$
+y para cualquier flecha $V\subseteq U$ en $\mathcal{O}(X)$, definimos la función de conjuntos
+\input{Diagramas/Diag1.tex}
+que a cada función continua de $U$ en $\mathbb{R}$ le asigna su respectiva función restricción al subconjunto $V$, que a su vez es una función continua de $V$ en $\mathbb{R}$. Tendremos entonces la siguiente propiedad:
+\begin{prop}
+   La regla $C$ que a cada $U\in\mathcal{O}(X)$ le asigna el conjunto $CU$ y a cada flecha $V\subseteq U$ en $\mathcal{O}(X)$ le asigna la función restricción de V en U, $C(V\subseteq U)$, es un funtor contravariante de $\mathcal{O}(X)$ en \normalfont{\textbf{Set}}.
+\end{prop}
+\begin{proof}
+   
+\end{proof}
