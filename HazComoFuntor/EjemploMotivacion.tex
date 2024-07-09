@@ -13,9 +13,29 @@ $$
 y para cualquier flecha $V\subseteq U$ en $\mathcal{O}(X)$, definimos la función de conjuntos
 \input{Diagramas/Diag1.tex}
 que a cada función continua de $U$ en $\mathbb{R}$ le asigna su respectiva función restricción al subconjunto $V$, que a su vez es una función continua de $V$ en $\mathbb{R}$. Tendremos entonces la siguiente propiedad:
-\begin{prop}
-   La regla $C$ que a cada $U\in\mathcal{O}(X)$ le asigna el conjunto $CU$ y a cada flecha $V\subseteq U$ en $\mathcal{O}(X)$ le asigna la función restricción de V en U, $C(V\subseteq U)$, es un funtor contravariante de $\mathcal{O}(X)$ en \normalfont{\textbf{Set}}.
-\end{prop}
+\begin{Prop}\label{Prop:P1}
+   La regla $C$ que a cada $U\in\mathcal{O}(X)$ le asigna el conjunto $CU$ y a cada flecha $V\subseteq U$ en $\mathcal{O}(X)$ le asigna la función restricción de V en U, $C(V\subseteq U): CU\to CV$, es un funtor contravariante de $\mathcal{O}(X)$ en \normalfont{\textbf{Set}}.
+\end{Prop}
 \begin{proof}
-   
+   \begin{itemize}
+      \item Trivialmente se tiene que $C$ respeta identidades, pues para cualquier $U\in\mathcal{O}(X)$ tenemos
+         \input{Diagramas/Diag2.tex}
+         es decir, $C(1_U)=1_{C(U)}$.
+      \item Supongamos que en $\mathcal{O}(X)$ tenemos $W\subseteq V\subseteq U$. Entonces $W\subseteq U$ y en \normalfont{\textbf{Set}} tenemos la función restricción de $U$ en $W$, $C(W\subseteq U):CU\to CW$. Tenemos ademas en \normalfont{\textbf{Set}} la composición $C(W\subseteq V)\circ C(V\subseteq U):CU\to CW$. Para cada $f\in CU$ se tiene
+         $$
+         \begin{aligned}
+            (C(W\subseteq V)\circ C(V\subseteq U))(f)&=C(W\subseteq V)(C(V\subseteq U)(f))\\
+                                                     &=C(W\subseteq V)(f|^U_V)\\
+                                                     &=(f|^U_V)|^V_W\\
+                                                     &=f|^U_W\\
+                                                     &=C(W\subseteq U)(f),
+         \end{aligned}
+         $$
+      \end{itemize}
+      con lo cual $C(W\subseteq V)\circ C(V\subseteq U) = C(W\subseteq U)$ y $C$ respeta composiciones.
 \end{proof}
+Con lo anterior, podemos decir que $C$ es un \textbf{prehaz} (de conjuntos):
+\begin{Def}[Prehaz]
+   Un prehaz (de conjuntos) sobre un espacio topológico $X$ es un funtor contravariante de $\mathcal{O}(X)$ en \normalfont{\textbf{Set}}.
+\end{Def}
+La Proposición \ref{Prop:P1} permite capturar de manera categórica la propiedad \textbf{(P1)}. Para lograr hacer lo mismo con la propiedad \textbf{(P2)} introducimos el concepto categórico de \textit{igualadores}.
