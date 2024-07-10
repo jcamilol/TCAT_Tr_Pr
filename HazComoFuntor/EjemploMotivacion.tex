@@ -4,7 +4,7 @@ Una constante en el quehacer matemático es el tránsito entre aspectos locales 
 \end{itemize}
 De forma recíproca, gracias al lema de pegado (Teorema \ref{Tma:lemaPegado}), $f$ nos permite pasar de un apropiado conocimiento local de $U$ a un conocimiento global, en la siguiente forma:
 \begin{itemize}
-   \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$. Si $f_i:f|_{U_i}:U_i\to\mathbb{R}$ es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
+   \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$, y para cada $i\in I$ definamos $f_i:=f|^{U}_{U_i}$ (la restricción de $f$ a $U_i$). Si $f_i$ es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
 \end{itemize}
 Las propiedades \textbf{(P1)} y \textbf{(P2)} pueden ser capturadas en lenguaje categórico. Para esto, consideremos la categoría $\mathcal{O}(X)$ que tiene como objetos los subconjuntos abiertos de $X$, y en la cual, dados $U,V\in \mathcal{O}(X)$, hay una flecha de $V$ en $U$ si y solo si $V\subseteq U$; dicha flecha en $\mathcal{O}(X)$ (que será la única de $V$ en $U$) la representamos igualmente mediante ``$V\subseteq U$". Ahora, para cada $U\in\mathcal{O}(X)$ definimos el conjunto $CU$ de todas las funciones reales continuas sobre U:
 $$
@@ -38,4 +38,4 @@ Con lo anterior, podemos decir que $C$ es un \textbf{prehaz} (de conjuntos):
 \begin{Def}[Prehaz]
    Un prehaz (de conjuntos) sobre un espacio topológico $X$ es un funtor contravariante de $\mathcal{O}(X)$ en \normalfont{\textbf{Set}}.
 \end{Def}
-La Proposición \ref{Prop:P1} permite capturar de manera categórica la propiedad \textbf{(P1)}. Para lograr hacer lo mismo con la propiedad \textbf{(P2)} introducimos el concepto categórico de \textit{igualadores}.
+La Proposición \ref{Prop:P1} permite capturar de manera categórica la propiedad \textbf{(P1)}. Para lograr hacer lo mismo con la propiedad \textbf{(P2)} introducimos el concepto de \textit{igualadores}.
