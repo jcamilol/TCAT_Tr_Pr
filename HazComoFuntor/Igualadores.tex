@@ -18,7 +18,9 @@ En la práctica, si no hay lugar a confusiones, nos referimos indistintamente po
    En cualquier categoría, todo igualador es un monomorfismo.  
 \end{Prop}
 \begin{proof}
-   Sean $\textbf{C}$ una categoría, $f,g:A\to B$ flechas paralelas en $\textbf{C}$ y $\langle E,e\rangle$ un igualador de $f$ y $g$. Supongamos que existen flechas $i,j:F\to E$ en $\textbf{C}$ tales que $e\circ i=e\circ j$. Tenemos $(f\circ e)\circ j=(g\circ e)\circ j$, es decir, $f\circ (e\circ j)=g\circ (e\circ j)$. Como $e$ es un igualador de $f$ y $g$, existe una única flecha $k:F\to E$ en $\textbf{C}$ tal que $e\circ k=e\circ j$; trivialmente $j$ cumple esta propiedad, pero también lo hace $i$, pues por hipótesis $e\circ i=e\circ j$. Se sigue que $i=j$ y por tanto $e$ es un monomorfismo en $\textbf{C}$.
+   Sean $\textbf{C}$ una categoría, $f,g:A\to B$ flechas paralelas en $\textbf{C}$ y $\langle E,e\rangle$ un igualador de $f$ y $g$. Supongamos que existen flechas $i,j:F\to E$ en $\textbf{C}$ tales que $e\circ i=e\circ j$.
+   \input{Diagramas/Diag6.tex}
+   Tenemos $(f\circ e)\circ j=(g\circ e)\circ j$, es decir, $f\circ (e\circ j)=g\circ (e\circ j)$. Como $e$ es un igualador de $f$ y $g$, existe una única flecha $k:F\to E$ en $\textbf{C}$ tal que $e\circ k=e\circ j$; trivialmente $j$ cumple esta propiedad, pero también lo hace $i$, pues por hipótesis $e\circ i=e\circ j$. Se sigue que $i=j$ y por tanto $e$ es un monomorfismo en $\textbf{C}$.
 
 \end{proof}
 Como en \normalfont{\textbf{Set}}, para una flecha es lo mismo ser monomorfismo que ser una función inyectiva, como corolario de lo anterior obtenemos que cualquier igualador en \normalfont{\textbf{Set}} es una función inyectiva.

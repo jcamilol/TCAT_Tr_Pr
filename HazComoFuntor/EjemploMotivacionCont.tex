@@ -5,7 +5,7 @@ Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:Ej
    \item $\pi_2:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ le asigna la familia $\left\lbrace {f_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
 \end{itemize}
 \begin{Prop}
-   En \normalfont{\textbf{Set}} el siguiente es un diagrama igualador
+   En $\normalfont{\textbf{Set}}$ el siguiente es un diagrama igualador
    \input{Diagramas/Diag5.tex}
 \end{Prop}
 \begin{proof}
@@ -24,6 +24,18 @@ Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:Ej
          \end{aligned}
          $$
          y por tanto $\pi_1\circ e=\pi_2\circ e$.
-      \item Veamos que la pareja $\langle CU,e\rangle$ es universal con la anterior propiedad.
+      \item Veamos que la pareja $\langle CU,e\rangle$ es universal con la anterior propiedad. Supongamos que existen $X\in\normalfont{\textbf{Set}}$ y $u:X\to\prod_{i\in I}CU_i$ en $\normalfont{\textbf{Set}}$ tales que $\pi_1\circ u=\pi_2\circ u$.
+         \input{Diagramas/Diag7.tex}
+         Para cada $g\in X$, existe $\left\lbrace g_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ tal que $g(u)=\left\lbrace g_i\right\rbrace_{i\in I}$. Para todo $i\in I$ tenemos que $g_i:U_i\to \mathbb{R}$ es una función continua, y además $\pi_1\circ u=\pi_2\circ u$ implica $\left\lbrace {g_i}|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}=\left\lbrace {g_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$, con lo cual para cualesquiera $i,j\in I$ se tiene $g_i|^{U_i}_{U_i\cap U_j}=g_j|^{U_j}_{U_i\cap U_j}$ y $g_i(x)=g_i|^{U_i}_{U_i\cap U_j}(x)=g_j|^{U_j}_{U_i\cap U_j}(x)=g_j(x)$ para todo $x\in U_i\cap U_j$. Podemos por tanto usar el lema de pegado (Teorema \Ref{Tma:lemaPegado}) para afirmar que $\bigcup_{i\in I}g_i$ es una función continua de $U$ en $\mathbb{R}$, es decir, $\bigcup_{i\in I}g_i\in CU$. Definimos así $v:X\to CU$ vía $v(g)=\bigcup_{i\in I}g_i$ para cada $g\in X$. Como 
+         $$
+         \begin{aligned}
+            (e\circ v)(g)&=e(v(g))\\
+                         &=e(\bigcup_{i\in I}g_i)\\
+                         &=\left\lbrace (\bigcup_{j\in I}g_j)|^U_{U_i}\right\rbrace_{i\in I}\\
+                         &=\left\lbrace g_i\right\rbrace_{i\in I}\\
+                         &=u(g),
+         \end{aligned}
+         $$
+         entonces $e\circ v=u$.
    \end{itemize}
 \end{proof}
