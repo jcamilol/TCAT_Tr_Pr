@@ -1,6 +1,29 @@
-Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:EjemploMotivacion}), resaltamos la importancia, para la validez de la propiedad \textbf{(P2)}, de la existencia de una buena ``condición de pegado", en el sentido de que las funciones $f_i$ ($i\in I$) se respetan dondequiera que se solapen: para cualesquiera $i,j\in I$ y cualquier $x\in U_i\cap U_j$, se tiene $f_i(x)=f_j(x)$; es este buen comportamiento local en subconjuntos de $U$ lo que nos permite el paso a un conocimiento global de $U$ mediante la función continua $f$ que se reconstruye al pegar los elementos de la familia $\left\lbrace f_i\right\rbrace_{i\in I}$. Notemos que $\left\lbrace f_i\right\rbrace_{i\in I}$ es un elemento del producto cartesiano $\prod_{i\in I} CU_i$. Como, para cualesquiera $i,j\in I$ se tiene $f_i\in CU_i$ y $f_j\in CU_j$, y como $U_i\cap U_j\subseteq U_i$ y $U_i\cap U_j\subseteq U_j$, obtenemos, fruto de restringir adecuadamente a intersecciones, las funciones ${f_i}|^{U_i}_{U_i\cap U_j}, {f_j}|^{U_j}_{U_i\cap U_j}\in C(U_i\cap U_j)$, con las cuales formamos las familia $\left\lbrace {f_i}|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$ y $\left\lbrace {f_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$, que a su vez son elementos del producto cartesiano $\prod_{(i,j)\in I\times I}C(U_i\cap U_j)$. Estas construcciones nos sugieren la definición de las siguientes funciones:
+Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:EjemploMotivacion}), resaltamos la importancia, para la validez de la propiedad \textbf{(P2)}, de la existencia de una buena ``condición de pegado", en el sentido de que las funciones $f|^{U}_{U_i}$ ($i\in I$) se respetan dondequiera que se solapen: para cualesquiera $i,j\in I$ y cualquier $x\in U_i\cap U_j$, se tiene $f|^U_{U_i}(x)=f(x)=f|^U_{U_j}(x)$; es este buen comportamiento local en subconjuntos de $U$ lo que nos permite el paso a un conocimiento global de $U$ mediante la función continua $f$ que se reconstruye al pegar los elementos de la familia $\left\lbrace f|^U_{U_i}\right\rbrace_{i\in I}$. Notemos que $\left\lbrace f|^U_{U_i}\right\rbrace_{i\in I}$ es un elemento del producto cartesiano $\prod_{i\in I} CU_i$. Como, para cualesquiera $i,j\in I$ se tiene $f|^U_{U_i}\in CU_i$ y $f|^U_{U_j}\in CU_j$, y como $U_i\cap U_j\subseteq U_i$ y $U_i\cap U_j\subseteq U_j$, obtenemos, fruto de restringir adecuadamente a intersecciones, las funciones $({f|^U_{U_i}})|^{U_i}_{U_i\cap U_j}, ({f|^U_{U_j}})|^{U_j}_{U_i\cap U_j}\in C(U_i\cap U_j)$, con las cuales formamos las familias $\left\lbrace ({f|^U_{U_i}})|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$ y $\left\lbrace ({f|^U_{U_j}})|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$, que a su vez son elementos del producto cartesiano $\prod_{(i,j)\in I\times I}C(U_i\cap U_j)$. Estas construcciones nos sugieren la definición de las siguientes funciones:
 \begin{itemize}
    \item $e:CU\to \prod_{i\in I}CU_i$ que a cada $f\in CU$ le asigna la familia $\left\lbrace f|^{U}_{U_i}\right\rbrace_{i\in I}$.
-   \item $\pi_1:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}$ le asigna la familia $\left\lbrace {f_i}|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
-   \item $\pi_2:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}$ le asigna la familia $\left\lbrace {f_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
+   \item $\pi_1:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ le asigna la familia $\left\lbrace {f_i}|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
+   \item $\pi_2:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ le asigna la familia $\left\lbrace {f_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
 \end{itemize}
+\begin{Prop}
+   En \normalfont{\textbf{Set}} el siguiente es un diagrama igualador
+   \input{Diagramas/Diag5.tex}
+\end{Prop}
+\begin{proof}
+   \begin{itemize}
+      \item Dado $f\in CU$ tenemos
+         $$
+         \begin{aligned}
+            (\pi_1\circ e)(f)&=\pi_1(e(f))\\
+                             &=\pi_1\left(\left\lbrace f|^U_{U_i}\right\rbrace_{i\in I}\right)\\
+                             &=\left\lbrace (f|^U_{U_i}\right)|^{U_i}_{U_i\cap U_j}\rbrace_{(i,j)\in I\times I}\\
+                             &=\left\lbrace f|^U_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}\\
+                             &=\left\lbrace (f|^U_{U_j})|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}\\
+                             &=\pi_2\left(\left\lbrace f|^U_{U_i}\right\rbrace_{i\in I}\right)\\
+                             &=\pi_2(e(f))\\
+                             &=(\pi_2\circ e)(f),
+         \end{aligned}
+         $$
+         y por tanto $\pi_1\circ e=\pi_2\circ e$.
+      \item Veamos que la pareja $\langle CU,e\rangle$ es universal con la anterior propiedad.
+   \end{itemize}
+\end{proof}

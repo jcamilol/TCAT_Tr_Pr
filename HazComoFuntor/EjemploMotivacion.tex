@@ -4,7 +4,7 @@ Una constante en el quehacer matemático es el tránsito entre aspectos locales 
 \end{itemize}
 De forma recíproca, gracias al lema de pegado (Teorema \ref{Tma:lemaPegado}), $f$ nos permite pasar de un apropiado conocimiento local de $U$ a un conocimiento global, en la siguiente forma:
 \begin{itemize}
-   \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$, y para cada $i\in I$ definamos $f_i:=f|^{U}_{U_i}$ (la restricción de $f$ a $U_i$). Si $f_i$ es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
+   \item[\textbf{(P2)}] Sea $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$. Si $f|^{U}_{U_i}:U_i\to\mathbb{R}$ (la restricción de $f$ a $U_i$) es continua para todo $i\in I$, entonces $f:U\to\mathbb{R}$ es continua.
 \end{itemize}
 Las propiedades \textbf{(P1)} y \textbf{(P2)} pueden ser capturadas en lenguaje categórico. Para esto, consideremos la categoría $\mathcal{O}(X)$ que tiene como objetos los subconjuntos abiertos de $X$, y en la cual, dados $U,V\in \mathcal{O}(X)$, hay una flecha de $V$ en $U$ si y solo si $V\subseteq U$; dicha flecha en $\mathcal{O}(X)$ (que será la única de $V$ en $U$) la representamos igualmente mediante ``$V\subseteq U$". Ahora, para cada $U\in\mathcal{O}(X)$ definimos el conjunto $CU$ de todas las funciones reales continuas sobre U:
 $$
