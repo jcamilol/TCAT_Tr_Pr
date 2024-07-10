@@ -14,7 +14,7 @@ Los ejemplos de igualadores que más estaremos trabajando son aquellos que apare
 \hspace{\fill}$\Diamond$
 \end{Ejm}
 En la práctica, si no hay lugar a confusiones, nos referimos indistintamente por `` igualador" tanto al par $\langle E,e\rangle$ como simplemente a la flecha $e$. Directamente de la definición de igualadores, podemos derivar algunas propiedades que serán útiles más adelante:
-\begin{Prop}
+\begin{Prop}\label{Prop:Igualadores1}
    En cualquier categoría, todo igualador es un monomorfismo.  
 \end{Prop}
 \begin{proof}
@@ -22,3 +22,12 @@ En la práctica, si no hay lugar a confusiones, nos referimos indistintamente po
 
 \end{proof}
 Como en \normalfont{\textbf{Set}}, para una flecha es lo mismo ser monomorfismo que ser una función inyectiva, como corolario de lo anterior obtenemos que cualquier igualador en \normalfont{\textbf{Set}} es una función inyectiva.
+\begin{Prop}\label{Prop:Igualadores2}
+   Supongamos que en \normalfont{\textbf{Set}} el siguiente es un diagrama igualador:
+   \input{Diagramas/Diag4.tex}
+   Entonces, para todo $a\in A$ tal que $f(a)=g(a)$, existe $\alpha\in E$ tal que $e(\alpha)=a$.
+\end{Prop}
+\begin{proof}
+  Definimos $F:=\left\lbrace x\in A\mid f(x)=g(x)\right\rbrace (\subseteq A)$. Por la Proposición \ref{Prop:Igualadores1}, sabemos que $\langle F,\normalfont{in}_{F,A}\rangle$ (donde $\normalfont{in}_{F,A}$ es la función inclusión de $F$ en $A$), es un igualador de $f$ y $g$, con lo cual, existe una única flecha $v:F\to E$ tal que $e\circ v=\normalfont{in}_{F,A}$. Como $a\in F$, tenemos $\alpha:=v(a)\in E$ y $e(\alpha)=e(v(a))=\normalfont{in}_{F,A}(a)=a$. 
+
+\end{proof}
