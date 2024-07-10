@@ -15,21 +15,16 @@
 
 \usepackage{tikz-cd} %para los diagramas conmutativos
 
-\newtheorem{Tma}{Teorema}
-\newtheorem{Prop}{Proposición}
-\numberwithin{Tma}{section}
-\numberwithin{Prop}{section}
-\newtheorem{Def}{Definición}
-\numberwithin{Def}{section}
-\newtheorem{Lema}{Lema}
-\numberwithin{Lema}{section}
-\newtheorem{Ejc}{Ejercicio}
-\numberwithin{Ejc}{section}
-\newtheorem{Ejm}{Ejemplo}
-\numberwithin{Ejc}{section}
+\counterwithin{equation}{subsection}
+\newtheorem{Tma}[equation]{Teorema}
+\newtheorem{Prop}[equation]{Proposición}
+\newtheorem{Def}[equation]{Definición}
+\newtheorem{Lema}[equation]{Lema}
+\newtheorem{Ejc}[equation]{Ejercicio}
+\newtheorem{Ejm}[equation]{Ejemplo}
 
 \renewcommand*{\proofname}{\textbf{Prueba}} %Muestra "prueba" en lugar de "proof"
-\renewcommand\refname{Referencias}
+\renewcommand\refname{Referencias} %Muestra "Referencias" en lugar de "References"
 
 %letterpaper: 21.59cm x 27.94cm
 \setmargins{2.8 cm} %margen izquierdo
