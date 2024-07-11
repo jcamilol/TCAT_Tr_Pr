@@ -27,6 +27,8 @@
 \newcommand{\Sh}{\normalfont{\text{Sh}}}
 \newcommand{\PreSh}{\normalfont{\text{PreSh}}}
 \newcommand{\Set}{\normalfont{\textbf{Set}}}
+\newcommand{\Top}{\normalfont{\textbf{Top}}}
+\newcommand{\Bund}{\normalfont{\text{Bund}}}
 
 \renewcommand*{\proofname}{\textbf{Prueba}} %Muestra "prueba" en lugar de "proof"
 \renewcommand\refname{Referencias} %Muestra "Referencias" en lugar de "References"
@@ -76,7 +78,13 @@
 
    \section{Haz como funtor}
       \input{HazComoFuntor/HazComoFuntor.tex}
+   \section{Espacios étalé o fibrados}
+      \input{EspaciosEtale/EspaciosEtale.tex}
    \section{Anexos}
       \input{Anexos/Anexos.tex}
-
+  
+   \newpage
+   \nocite{*}
+   \bibliographystyle{apalike}
+   \bibliography{refs.bib}
 \end{document}
