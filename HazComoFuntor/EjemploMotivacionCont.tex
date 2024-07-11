@@ -4,7 +4,7 @@ Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:Ej
    \item $\pi_1:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ le asigna la familia $\left\lbrace {f_i}|^{U_i}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
    \item $\pi_2:\prod_{i\in I}CU_i\to \prod_{(i,j)\in I\times I}C(U_i\cap U_j)$ que a cada $\left\lbrace f_i\right\rbrace_{i\in I}\in\prod_{i\in I}CU_i$ le asigna la familia $\left\lbrace {f_j}|^{U_j}_{U_i\cap U_j}\right\rbrace_{(i,j)\in I\times I}$.
 \end{itemize}
-\begin{Prop}
+\begin{Prop}\label{Prop:P2}
    En $\normalfont{\textbf{Set}}$ el siguiente es un diagrama igualador
    \input{Diagramas/Diag5.tex}
 \end{Prop}
@@ -55,3 +55,4 @@ Continuando con nuestro ``ejemplo como motivación" (Sección \ref{subsection:Ej
          obteniendo $v'=v$, lo cual completa la prueba.  
    \end{itemize}
 \end{proof}
+Notemos que la Proposición \Ref{Prop:Igualadores2} vale para cualesquiera que sean el conjunto abierto $U$ y el cubrimiento abierto $\left\lbrace U_i\right\rbrace_{i\in I}$ de $U$ (haciendo las respectivas modificaciones en la definición de $e, \pi_1$ y $\pi_2$). El hecho de que $e$ sea el igualador de $\pi_1$ y $\pi_2$ nos traduce la ``condición de pegado" que se satisface al restringir funciones continuas de $U$ a subconjuntos de éste, a saber, que las funciones resultantes coincidan en las respectivas intersecciones. Es a su vez ésta condición de pegado la que, mediante el Teorema \Ref{Tma:lemaPegado}, nos permite el paso de lo local a lo global que se expresa en la propiedad $\textbf{(P2)}$. 
