@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Haz como funtor}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Un ejemplo como motivación}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Igualadores}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Un ejemplo como motivación (continuación)}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Definición funtorial de Haz}{7}{}%
+\contentsline {section}{\numberline {2}Espacios étalé o fibrados}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Manojos y homeomorfismos locales}{8}{}%
+\contentsline {section}{\numberline {3}Apéndice}{9}{}%

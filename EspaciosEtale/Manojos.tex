@@ -7,3 +7,10 @@ Según el contexto, es frecuente denotar al manojo $\langle Y,p\rangle$ simpleme
    \input{Diagramas/Diag9.tex}
 \end{Def}
 La categoría $\Top /X$ es un ejemplo de ``categoría sobre" (ver por ejemplo \cite[p.~45]{CWM} donde se denota por $(\Top\downarrow X)$). La notación $\Bund (X)$ es debido a \textit{bundle}, la traducción al inglés de la palabra \textit{manojo}. 
+\begin{Def}[Homeomorfismo local]
+   Dados $X$ y $Y$ espacios topológicos, decimos que una función $p:Y\to X$ es un homeomorfismo local si para todo $x\in X$ existe $U_x\in \mathcal{O}(X)$ con $x\in U_x$ tal que $p(U_x)\in\mathcal{O} (Y)$ y $p|^{X}_{U_x}:U_x\to p(U_x)$ es un homeomorfismo. 
+\end{Def}
+La siguiente proposición, cuya prueba se presenta en la sección \Ref{section:Apendice} (Apéndice) nos permite considerar a un homeomorfismo local como un caso especial de manojo.
+\begin{Prop}
+   Todo homeomorfismo es una función continua y abierta; además la familia $\left\lbrace U_x\right\rbrace_{x\in X}$ forma una base para la topología de $X$.
+\end{Prop}
