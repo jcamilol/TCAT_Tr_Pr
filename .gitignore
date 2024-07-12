@@ -3,3 +3,6 @@
 *.aux
 *.fdb_latexmk
 *.gz
+*.bbl
+*.blg
+*.toc
