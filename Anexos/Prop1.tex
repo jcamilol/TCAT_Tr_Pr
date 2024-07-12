@@ -1,3 +1,9 @@
 \begin{Prop}
-    Todo homeomorfismo es una función continua y abierta; además la familia $\left\lbrace U_x\right\rbrace_{x\in X}$ forma una base para la topología de $X$.
+   Si $p:Y\to X$ es un homeomorfismo local, entonces $p$ es una función continua y abierta.
 \end{Prop}
+\begin{proof}
+   \begin{itemize}
+      \item Probamos la continuidad de $p$ puntualmente. Sean $y\in Y$ y $U\subseteqab X$ con $p(y)\in U$. Tenemos que $y\in V_y\subseteqab Y$ y $p(y)\in p(V_y)\subseteqab X$. Tomando $W=p(V_y)\cap U$ se tiene $p(y)\in W\subseteqab X$. Además $W\subseteq p(V_y)$ y $W\subseteq U$. Como $p|^{Y}_{V_y}:V_y\to p(V_y)$ es un homeomorfismo, entonces $p^{-1}(W)=(p|^{Y}_{V_y})^{-1}(W)\subseteqab V_y \subseteqab Y$, así que $y\in p^{-1}(W)\subseteqab Y$; igualmente, $p(p^{-1}(W))\subseteq W \subseteq U$, lo cual prueba que $p$ es continua en $y$. Como $y$ es arbitraria en $Y$, obtenemos que $p:Y\to X$ es continua.
+      \item 
+   \end{itemize}
+\end{proof}
