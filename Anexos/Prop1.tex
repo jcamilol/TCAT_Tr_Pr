@@ -4,6 +4,19 @@
 \begin{proof}
    \begin{itemize}
       \item Probamos la continuidad de $p$ puntualmente. Sean $y\in Y$ y $U\subseteqab X$ con $p(y)\in U$. Tenemos que $y\in V_y\subseteqab Y$ y $p(y)\in p(V_y)\subseteqab X$. Tomando $W=p(V_y)\cap U$ se tiene $p(y)\in W\subseteqab X$. Además $W\subseteq p(V_y)$ y $W\subseteq U$. Como $p|^{Y}_{V_y}:V_y\to p(V_y)$ es un homeomorfismo, entonces $p^{-1}(W)=(p|^{Y}_{V_y})^{-1}(W)\subseteqab V_y \subseteqab Y$, así que $y\in p^{-1}(W)\subseteqab Y$; igualmente, $p(p^{-1}(W))\subseteq W \subseteq U$, lo cual prueba que $p$ es continua en $y$. Como $y$ es arbitraria en $Y$, obtenemos que $p:Y\to X$ es continua.
-      \item 
+      \item Sea $V\subseteqab Y$; probemos que $p(V)\subseteqab X$. Para cada $y\in V$ definimos $W_y=V_y\cap V\subseteqab V_y$. Como $p|^{V}_{V_y}:V_y\to p(V_y)$ es un homeomorfismo, en particular es una función abierta, luego $p(W_y)=(p|^{V}_{V_y})(W_y)\subseteqab p(V_y)$; como $p(V_y)\subseteqab X$ entonces $p(W_y)\subseteqab X$ para cada $y\in V$, luego $\bigcup_{y\in V} p(W_y)\subseteqab X$. Ya que
+         $$
+         \begin{aligned}
+            \bigcup_{y\in V}p(W_y)&=\bigcup_{y\in V}p(V\cap V_y)\\
+                                  &=p\left( \bigcup_{y\in V}(V\cap V_y)\right)\\
+                                  &=p\left( V\cap\bigcup_{y\in V}V_y\right)\\
+                                  &=p(V),
+         \end{aligned}
+         $$
+         pues $V\subseteq \bigcup_{y\in V}V_y$, entonces $p(V)\subseteqab X$. Obtenemos así que $p:Y\to X$ es una función abierta.
    \end{itemize}
 \end{proof}
+
+
+            
+
