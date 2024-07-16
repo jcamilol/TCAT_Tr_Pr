@@ -4,5 +4,6 @@
 \contentsline {subsection}{\numberline {1.3}Un ejemplo como motivación (continuación)}{5}{}%
 \contentsline {subsection}{\numberline {1.4}Definición funtorial de Haz}{7}{}%
 \contentsline {section}{\numberline {2}Espacios étalé o fibrados}{8}{}%
-\contentsline {subsection}{\numberline {2.1}Manojos y homeomorfismos locales}{8}{}%
-\contentsline {section}{\numberline {3}Apéndice}{9}{}%
+\contentsline {subsection}{\numberline {2.1}Manojos}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Espacios étalé}{9}{}%
+\contentsline {section}{\numberline {3}Apéndice}{10}{}%

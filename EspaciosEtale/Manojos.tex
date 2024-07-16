@@ -1,16 +1,19 @@
 \begin{Def}[Manojo]
     Un manojo sobre un espacio topológico $X$ es una pareja $\langle Y, p\rangle$ con $Y$ un espacio topológico y $p:Y\to X$ una función continua.
 \end{Def}
-Según el contexto, es frecuente denotar al manojo $\langle Y,p\rangle$ simplemente por $p$. Las inversas puntuales $p^{-1}\left\lbrace x\right\rbrace$ ($x\in X$) son llamadas las fibras de $p$ sobre $X$. La colección de todos los manojos sobre un espacio topológico tiene estructura de categoría:
+Según el contexto, es frecuente referirnos al manojo $\langle Y,p\rangle$ simplemente por $p$. La colección de todos los manojos sobre un espacio topológico tiene estructura de categoría:
 \begin{Def}[Categoría $\textbf{Top}/X$]
    La categoría $\Top /X$ (léase ``categoría Top sobre X") o $\Bund (X)$ tiene por objetos todos los manojos sobre $X$. Dados $\langle Y,p\rangle,\langle Y',q\rangle\in \Top/X$, $f$ es una flecha $\langle Y,p\rangle\to\langle Y',q\rangle$ en $\Top/X$ si $f:Y\to Y'$ es una función continua y $q\circ f=p$.
    \input{Diagramas/Diag9.tex}
 \end{Def}
-La categoría $\Top /X$ es un ejemplo de ``categoría sobre" (ver por ejemplo \cite[p.~45]{CWM} donde se denota por $(\Top\downarrow X)$). La notación $\Bund (X)$ es debido a \textit{bundle}, la traducción al inglés de la palabra \textit{manojo}. 
-\begin{Def}[Homeomorfismo local]
-   Dados $X$ y $Y$ espacios topológicos, decimos que una función $p:Y\to X$ es un homeomorfismo local sobre $X$ si para todo $y\in Y$ existe $V_y\subseteqab Y$ con $y\in V_y$ tal que $p(V_y)\subseteqab X$ y $p|^{Y}_{V_y}:V_y\to p(V_y)$ es un homeomorfismo. 
+La categoría $\Top /X$ es un ejemplo de ``categoría sobre" (ver por ejemplo \cite[p.~45]{CWM} donde se denota por $(\Top\downarrow X)$). La notación $\Bund (X)$ es debido a \textit{bundle}, la traducción al inglés de la palabra \textit{manojo}. Un concepto esencial al trabajar con manojos es el de \textit{sección}:
+\begin{Def}[Secciones]
+   Sea $p:Y\to X$ un manojo sobre $X$.
+   \begin{itemize}
+      \item Una flecha $s:1_{X}\to p$ en $\Top/X$ es llamada una sección transversal de $p$. En este caso decimos que $s$ es una sección global de $p$.
+      \item Dado $U\subseteqab X$, una flecha $s:in_{U,X}\to p$ en $\Top/X$ es llamada una sección transversal de $p$ sobre $U$. En este caso decimos que $s$ es una sección local de $p$.
+   \end{itemize}
 \end{Def}
-La siguiente proposición, cuya prueba se presenta en la Sección \Ref{section:Apendice} (Apéndice) nos permite considerar a un homeomorfismo local sobre $X$ como un caso especial de manojo sobre $X$.
-\begin{Prop}
-   Si $p:Y\to X$ es un homeomorfismo local, entonces $p$ es una función continua y abierta.
-\end{Prop}
+De esta forma, una sección global (local) es una función continua que hace que el siguiente diagrama de la izquierda (derecha) conmute:
+\input{Diagramas/Diag10.tex}
+Vemos también que $s$ se presenta como una inversa (local), a derecha, de $p$.
