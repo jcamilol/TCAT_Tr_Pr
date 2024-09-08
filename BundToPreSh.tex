@@ -1,0 +1,37 @@
+(A lo largo de esta sección $X$ denota un espacio topológico fijo).
+
+En esta sección construimos y estudiamos un funtor $\Gamma$ de la categoría $\Top /X$ de los manojos sobre $X$, en la categoría $\PreSh (X)$ de prehaces sobre $X$.
+
+\begin{Def}[Acción de $\Gamma_p$ sobre objetos]
+   Sea $p:Y\to X$ un manojo sobre $X$. Para cada $U\in\mathcal{O}(X)$ definimos $\Gamma_p U$ como el conjunto de todas las secciones transversales de $p$ sobre $U$.
+   \input{Diagramas/Diag11.tex}
+\end{Def}
+Notemos que si se tiene la flecha $V\subseteq U$ en $\mathcal{O}(X)$, para cada $s\in\Gamma_p U$ surge una sección transversal de $p$ sobre $V$, a saber, $s\circ \iota_{V,U}=s|^{U}_{V}$, es decir $s|^{U}_{V}\in\Gamma_p V$:
+\input{Diagramas/Diag12.tex}
+\begin{Def}[Acción de $\Gamma_p$ sobre flechas]
+   Sea $p:Y\to X$ un manojo sobre $X$. Para cada flecha $V\subseteq U$ en $\mathcal{O}(X)$, definimos la flecha (de $\Set$) $\Gamma_p(V\subseteq U):\Gamma_p U\to \Gamma_p V:s\mapsto s|^{U}_{V}$. 
+\end{Def}
+Las anteriores asignaciones de flechas y objetos hacen de $\Gamma_p$ un funtor contravariante $\Gamma_p:\mathcal{O}(X)^{\text{op}}\to \Set$, es decir, un prehaz sobre $X$; más aún, $\Gamma_p$ resulta ser un haz sobre $X$.
+\begin{Prop}
+   Para cada manojo $p:Y\to X$, $\Gamma_p$ es un haz sobre $X$.
+\end{Prop}
+\begin{proof}
+   \begin{itemize}
+      \item La prueba de que $\Gamma_p$ es un prehaz sobre $X$ es similar a la que se da para la Proposición ($\Ref{Prop:P1}$).
+      \item Sean $U\in \mathcal{O}(X)$ y $\left\lbrace U_i\right\rbrace_{i\in I}$ un cubrimiento abierto de $U$. El siguiente diagrama en $\Set$ es un igualador:
+         \input{Diagramas/Diag13.tex}
+         La prueba de esto es similar a la que se da para la Proposición (\Ref{Prop:P2}), sumada al siguiente hecho: dada una familia $\left\lbrace g_i\right\rbrace_{i\in I}\in \prod_{i\in I}\Gamma_p U$, se tiene $p\circ \bigcup_{i\in I} g_i=\iota_{U,X}$: dada $x\in U=\bigcup_{i\in I}U_i$, existe $j\in I$ tal que $x\in U_j$; como $g_j:U_j\to Y$ es una sección transversal de $p$ sobre $U_j$, se tiene $p\circ g_j = \iota_{U_j,X}$, y por tanto
+         $$
+         \begin{aligned}
+            \left(p\circ \bigcup_{i\in I}g_i\right)(x)&=p\left( \bigcup_{i\in I}g_i(x)\right)\\
+                                           &=p(g_j(x))\\
+                                           &=\iota_{U_j,X}(x)\\
+                                           &=x\\
+                                           &=\iota_{U,X}(x);
+         \end{aligned}
+         $$
+         con esto $p\circ \bigcup_{i\in I}g_i=\iota_{U,X}$. Lo anterior se hace para garantizar $\bigcup_{i\in I}g_i\in \Gamma_p U$.
+   \end{itemize}
+   Por tanto $\Gamma_p$ es un haz sobre $X$.
+\end{proof}
+
