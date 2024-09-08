@@ -34,7 +34,7 @@ Las anteriores asignaciones de flechas y objetos hacen de $\Gamma_p$ un funtor c
    \end{itemize}
    Por tanto $\Gamma_p$ es un haz sobre $X$.
 \end{proof}
-A los haces del tipo $\Gamma_p$, con $p:Y\to X$ manojo sobre $X$, los llamamos \textit{haces de secciones transversales} sobre $X$. De esta manera, obtenemos por cada $p\in\Top /X$ un objeto $\Gamma_p \in \Sh (X)$. Ahora deseamos obtener, por cada flecha $f:\langle Y,p \rangle \to \langle Y',p'\rangle$ en $\Top /X$, una flecha $\Gamma_f:\Gamma_p\to\Gamma_p'$ de $\Sh(X)$, es decir, una transformación natural entre los funtores $\Gamma_p,\Gamma_p':\mathcal{O}(X)^\text{op}\to\Set$; para esto necesitamos asignar, para cada $U\in\mathcal{O}(X)$, una función $\Gamma_f U$ entre los conjuntos $\Gamma_p U$ y $\Gamma_p' U$, que además nos garantice que si $V\subseteq U$ es una flecha en $\mathcal{O}(X)$, entonces el siguiente diagrama de $\Set$ conmute:
+A los haces del tipo $\Gamma_p$, con $p:Y\to X$ un manojo sobre $X$, los llamamos \textit{haces de secciones transversales} sobre $X$. En ocaciones denotamos $\Gamma Y$ en lugar de $\Gamma_p$. Obtenemos por cada $p\in\Top /X$ un objeto $\Gamma_p \in \Sh (X)$. Ahora deseamos obtener, por cada flecha $f:\langle Y,p \rangle \to \langle Y',p'\rangle$ en $\Top /X$, una flecha $\Gamma_f:\Gamma_p\to\Gamma_p'$ de $\Sh(X)$, es decir, una transformación natural entre los funtores $\Gamma_p,\Gamma_p':\mathcal{O}(X)^\text{op}\to\Set$; para esto necesitamos asignar, para cada $U\in\mathcal{O}(X)$, una función $\Gamma_f U$ entre los conjuntos $\Gamma_p U$ y $\Gamma_p' U$, que además nos garantice que si $V\subseteq U$ es una flecha en $\mathcal{O}(X)$, entonces el siguiente diagrama de $\Set$ conmute:
 \input{Diagramas/Diag14}
 Notemos que la función $\Gamma_f U$ nos exige asignar a cada sección transversal $s$ de $p$ sobre $U$ (i.e. $s:U\to Y$ es una función continua y $p\circ s=\iota_{U,X}$) una sección transversal $\Gamma_f U (s)$ de $p'$ sobre $U$ (i.e. una función continua $\Gamma_f U (s):U\to Y'$ tal que $p'\circ \Gamma_f U(s)=\iota_{U,X}$). El siguiente diagrama que se forma en $\Top /X$
 \input{Diagramas/Diag15}
@@ -47,7 +47,25 @@ $$
 \end{aligned}
 $$
 sugiriéndonos tomar $\Gamma_f U (s)=f\circ s$. Con esto tenemos
-(PROBAR LA NATURALIDAD; ``CON ESTO HEMOS PROBADO LA SIGUIENTE PROPOSICIÓN:"
+$$
+\begin{aligned}
+   (\Gamma_f V\circ\Gamma_p(V\subseteq U))(s) &=\Gamma_f V(\Gamma_p (V\subseteq U)(s))\\
+                                              &= \Gamma_f V(s|^{U}_{V})\\
+                                              &=f\circ s|^{U}_{V}\\
+                                              &=f\circ (s\circ \iota_{V,U})\\
+                                              &=(f\circ s)\circ \iota_{V,U}\\
+                                              &=(f\circ s)|^{U}_{V}\\
+                                              &=\Gamma_{p'}(V\subseteq U)(f\circ s)\\
+                                              &=\Gamma_{p'}(V\subseteq U)(\Gamma_f U(s))\\
+                                              &=(\Gamma_{p'}(V\subseteq U)\circ\Gamma_f U)(s),\\
+\end{aligned}
+$$
+Y por tanto $\Gamma_f V\circ \Gamma_p(V\subseteq U)=\Gamma_{p'}(V\subseteq U)\circ \Gamma_f U$. Lo anterior prueba que $\Gamma_f$ es una transformación natural, para cada flecha $f$ en $\Top /X$. Estas asignaciones hacen de $\Gamma$ un funtor de $\Top /X$ en $\PreSh(X)$ (de hecho, en $\Sh(X)$, pero las razones de tomar la categoría de prehaces sobre $X$ como codominio de $\Gamma$ se entenderán más adelante):
 \begin{Prop}
-    
+   Las asignaciones $p\mapsto \Gamma_p$ para cada $p\in \Top /X$ y $f\mapsto \Gamma_f$ para cada flecha $f$ en $\Top /X$, determinan un funtor $\Gamma:\Top /X\to\PreSh(X)$.   
 \end{Prop}
+\begin{proof}
+   \begin{itemize}
+      \item Veamos que $\Gamma$ respeta identidades. Sea $\langle Y, p\rangle\in \Top /X$. Debemos ver $\Gamma_{1_{p}}=1_{\Gamma_{p}}$, donde $1_{\Gamma_{p}}$ es la transformación natural identidad del funtor $\Gamma_p$ en sí mismo. Dados $U\in \mathcal{O}(X)$ y $s\in \Gamma_p U$, tenemos que $\Gamma_{1_p} U$ es una función de $\Gamma_p U$ en $\Gamma_p U$ y $\Gamma_{1_p}U(s)=1_p\circ s=s$; por tanto $\Gamma_{1_p}U=1_{\Gamma_p U}=1_{\Gamma_p}U$. Como lo anterior se tiene para $U\in \mathcal{O}(X)$ arbitrario, se sigue que $\Gamma_{1_p}=1_{\Gamma_p}$.
+   \end{itemize}
+\end{proof}
