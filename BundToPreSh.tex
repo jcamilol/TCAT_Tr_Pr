@@ -34,4 +34,20 @@ Las anteriores asignaciones de flechas y objetos hacen de $\Gamma_p$ un funtor c
    \end{itemize}
    Por tanto $\Gamma_p$ es un haz sobre $X$.
 \end{proof}
-
+A los haces del tipo $\Gamma_p$, con $p:Y\to X$ manojo sobre $X$, los llamamos \textit{haces de secciones transversales} sobre $X$. De esta manera, obtenemos por cada $p\in\Top /X$ un objeto $\Gamma_p \in \Sh (X)$. Ahora deseamos obtener, por cada flecha $f:\langle Y,p \rangle \to \langle Y',p'\rangle$ en $\Top /X$, una flecha $\Gamma_f:\Gamma_p\to\Gamma_p'$ de $\Sh(X)$, es decir, una transformación natural entre los funtores $\Gamma_p,\Gamma_p':\mathcal{O}(X)^\text{op}\to\Set$; para esto necesitamos asignar, para cada $U\in\mathcal{O}(X)$, una función $\Gamma_f U$ entre los conjuntos $\Gamma_p U$ y $\Gamma_p' U$, que además nos garantice que si $V\subseteq U$ es una flecha en $\mathcal{O}(X)$, entonces el siguiente diagrama de $\Set$ conmute:
+\input{Diagramas/Diag14}
+Notemos que la función $\Gamma_f U$ nos exige asignar a cada sección transversal $s$ de $p$ sobre $U$ (i.e. $s:U\to Y$ es una función continua y $p\circ s=\iota_{U,X}$) una sección transversal $\Gamma_f U (s)$ de $p'$ sobre $U$ (i.e. una función continua $\Gamma_f U (s):U\to Y'$ tal que $p'\circ \Gamma_f U(s)=\iota_{U,X}$). El siguiente diagrama que se forma en $\Top /X$
+\input{Diagramas/Diag15}
+nos muestra que $f\circ s$ es una función continua de $U$ en $Y$, y
+$$
+\begin{aligned}
+   p'\circ (f\circ s)&=(p'\circ f)\circ s\\
+                     &=p\circ s\\
+                     &=\iota_{U,X},
+\end{aligned}
+$$
+sugiriéndonos tomar $\Gamma_f U (s)=f\circ s$. Con esto tenemos
+(PROBAR LA NATURALIDAD; ``CON ESTO HEMOS PROBADO LA SIGUIENTE PROPOSICIÓN:"
+\begin{Prop}
+    
+\end{Prop}
