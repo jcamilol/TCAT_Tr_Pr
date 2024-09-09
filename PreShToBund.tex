@@ -1,0 +1,23 @@
+En esta sección construimos y estudiamos un funtor $\Lambda$ de la categoría $\PreSh(X)$ de prehaces sobre $X$ en la categoría $\Top /X$ de manojos sobre $X$.
+
+Iniciamos definiendo el ``suelo" de un elemento de $X$ respecto a un prehaz sobre $X$:
+\begin{Def}[$P$-suelo de $x$]
+   Dados $x\in X$ y $P\in \PreSh(X)$, definimos el ``P-suelo de $x$" (denotado como $\PSu (x)$) como el conjunto $\left\lbrace (U,s)\mid x\in U\in \mathcal{O}(X); s\in PU\right\rbrace$
+\end{Def}
+ Buscamos definir una relación de equivalencia sobre el suelo de cada elemento de $X$:
+\begin{Def}
+   Sean $P\in \PreSh(X)$ y $x\in X$. Definimos en $\PSu(x)$ la relación $\sim_{P,x}$ de la siguiente manera:
+   \begin{center}
+      Dados $(U,s),(V,t)\in \PSu(x)$, $(U,s)\sim_{P,x}(V,t)$, si y sólo si, existe $W\in\mathcal{O}(X)$ tal que $x\in W\subseteq U\cap V$ y $s|^{U}_{W}=t|^{V}_{W}$.
+   \end{center}
+   Si $(U,s)\sim_{P,x}(V,t)$, decimos que $(U,s)$ y $(V,t)$ tienen el mismo P-germen en $x$. 
+\end{Def}
+Notemos que la condición $W\subseteq U\cap V$ se tiene si y sólo si $W\subseteq U$ y $W\subseteq V$, y que en este caso $s|^{U}_{W}$ y $t|^{V}_{W}$ son elementos de $P(W)$, siempre que $s\in PU$ y $t\in PV$. De esta forma, podemos representar $(U,s)\sim_{P,x}(V,t)$ con el cumplimiento simultaneo de los dos siguientes diagramas:
+\input{Diagramas/Diag18.tex}
+Donde el diagrama de la izquierda está en $\mathcal{O}(X)$, el de la derecha en $Set$ y las flechas azules denotan pertenencia conjuntista.
+\begin{Prop}
+   La relación $\sim_{P,x}$ es de equivalencia en $\PSu(x)$. 
+\end{Prop}
+\begin{proof}
+    
+\end{proof}
