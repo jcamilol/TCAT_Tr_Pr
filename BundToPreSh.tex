@@ -67,5 +67,21 @@ Y por tanto $\Gamma_f V\circ \Gamma_p(V\subseteq U)=\Gamma_{p'}(V\subseteq U)\ci
 \begin{proof}
    \begin{itemize}
       \item Veamos que $\Gamma$ respeta identidades. Sea $\langle Y, p\rangle\in \Top /X$. Debemos ver $\Gamma_{1_{p}}=1_{\Gamma_{p}}$, donde $1_{\Gamma_{p}}$ es la transformación natural identidad del funtor $\Gamma_p$ en sí mismo. Dados $U\in \mathcal{O}(X)$ y $s\in \Gamma_p U$, tenemos que $\Gamma_{1_p} U$ es una función de $\Gamma_p U$ en $\Gamma_p U$ y $\Gamma_{1_p}U(s)=1_p\circ s=s$; por tanto $\Gamma_{1_p}U=1_{\Gamma_p U}=1_{\Gamma_p}U$. Como lo anterior se tiene para $U\in \mathcal{O}(X)$ arbitrario, se sigue que $\Gamma_{1_p}=1_{\Gamma_p}$.
+      \item Veamos que $\Gamma$ respeta composiciones. Supongamos que tenemos en $\Top /X$ el siguiente diagrama conmutativo
+         \input{Diagramas/Diag16}
+         y veamos que en $\PreSh(X)$ el siguiente diagrama conmuta:
+         \input{Diagramas/Diag17}
+         Sean $U\in\mathcal{O}(X)$ y $s\in\Gamma_p U$. Tenemos
+         $$
+         \begin{aligned}
+            (\Gamma_{g\circ f}U)(s)&=(g\circ f)\circ s\\
+                                   &=g\circ(f\circ s)\\
+                                   &=(\Gamma_{g}U)(f\circ s)\\
+                                   &=(\Gamma_{g}U)(\Gamma_{f}U(s))\\
+                                   &=(\Gamma_{g}U\circ\Gamma_{f}U)(s).
+         \end{aligned}
+         $$
+         Por tanto $\Gamma_{g\circ f}=\Gamma_{g}U\circ\Gamma_{f}U$; como esto vale para $U\in\mathcal{O}(X)$ arbitrario, se sigue $\Gamma_{g\circ f}=\Gamma_{g}\circ\Gamma_{f}$.
    \end{itemize}
+   Lo anterior prueba que $\Gamma$ es un funtor de $\Top /X$ en $\PreSh(X)$.
 \end{proof}
