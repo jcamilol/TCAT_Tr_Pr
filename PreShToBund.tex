@@ -12,12 +12,32 @@ Iniciamos definiendo el ``suelo" de un elemento de $X$ respecto a un prehaz sobr
    \end{center}
    Si $(U,s)\sim_{P,x}(V,t)$, decimos que $(U,s)$ y $(V,t)$ tienen el mismo P-germen en $x$. 
 \end{Def}
+La igualdad $s|^{U}_{W}=t|^{V}_{W}$ con $W\subseteq U\cap V$ nos recuerda la idea de ``coincidir localmente" que se mostró en las motivaciones dadas en la primera sección.
+
 Notemos que la condición $W\subseteq U\cap V$ se tiene si y sólo si $W\subseteq U$ y $W\subseteq V$, y que en este caso $s|^{U}_{W}$ y $t|^{V}_{W}$ son elementos de $P(W)$, siempre que $s\in PU$ y $t\in PV$. De esta forma, podemos representar $(U,s)\sim_{P,x}(V,t)$ con el cumplimiento simultaneo de los dos siguientes diagramas:
 \input{Diagramas/Diag18.tex}
 Donde el diagrama de la izquierda está en $\mathcal{O}(X)$, el de la derecha en $Set$ y las flechas azules denotan pertenencia conjuntista.
+
+En las dos anteriores definiciones, si es claro el prehaz $P$ con el que se está trabajando, solemos denotar $\Su(x)$ y $\sim_{x}$ en lugar de \PSu(x) y $\sim_{P,x}$, respectivamente.
 \begin{Prop}
-   La relación $\sim_{P,x}$ es de equivalencia en $\PSu(x)$. 
+   Para cualesquiera $P\in\PreSh(X)$ y $x\in X$, la relación $\sim_{x}$ es de equivalencia sobre $\Su(x)$.
 \end{Prop}
 \begin{proof}
-    
+   La reflexividad y simetría de $\sim_{x}$ se siguen directamente de la definición. Veamos que $\sim_{x}$ es transitiva. Sean $(T,r),(U,s),(V,t)\in\Su(x)$ tales que $(T,r)\sim_{x}(U,s)$ y $(U,s)\sim_{x}(V,t)$. Existen $W_1,W_2\in\mathcal{O}(X)$ tales que $x\in W_1\subseteq T\cap U$ y $x\in W_2\subseteq U\cap V$. Además $r|^{T}_{W_1}=s|^{U}_{W_1}$ y $s|^{U}_{W_1}=t|^{V}_{W_2}$. Tenemos $W_1\cap W_2\in\mathcal{O}(X)$ y $x\in W_1\cap W_2\subseteq T\cap V$; se forma en $\mathcal{O}(X)$ el siguiente diagrama conmutativo:
+   
+   \input{Diagramas/Diag19.tex}
+   Como $P$ es un funtor contravariante de $\mathcal{O}(X)$ en $\Set$, obtenemos en $\Set$ el siguiente diagrama conmutativo:
+   \input{Diagramas/Diag20.tex}
+   Siguiéndolo tenemos que
+   $$
+   \begin{aligned}
+      r|^{T}_{W_1\cap W_2}&=(r|^{T}_{W_1})|^{W_1}_{W_1\cap W_2}\\
+                          &=(s|^{U}_{W_1})|^{W_1}_{W_1\cap W_2}\\
+                          &=s|^{U}_{W_1\cap W_2}\\
+                          &=(s|^{U}_{W_2})|^{W_2}_{W_1\cap W_2}\\
+                          &=(t|^{V}_{W_2})|^{W_2}_{W_1\cap W_2}\\
+                          &=t|^{V}_{W_1\cap W_2}.\\
+   \end{aligned}
+   $$
+   Por tanto, $(T,r)\sim_{x} (V,t)$ y $\sim_{x}$ es transitiva. Obtenemos que $\sim_{x}$ es una relación de equivalencia en $\Su(x)$.
 \end{proof}
