@@ -45,6 +45,8 @@ Ahora consideramos las clases de equivalencia generadas por la relación de tene
 \begin{Def}
    Sean $P\in \PreSh(X)$ y $x\in X$. Para cada $(U,s)\in \Su(x)$, la clase de equivalencia de $(U,s)$ respecto a $\sim_{P,x}$ se denota por $\Pgerm_{x}s$, y la llamamos el germen de $(U,s)$ en $x$.
 \end{Def}
+Nuevamente, si por el contexto es claro con qué prehaz estamos trabajando, puede omitirse e- ``$P-$" en la anterior definición.
+
 El siguiente lema, que será utilizado más adelante, nos muestra que el germen de un elemento se conserva bajo restricciones; propiedad que en efecto concuerda con la intuición desarrollada hasta el momento.
 \begin{Lema}
    Sean $P\in\PreSh(X)$ y $U,V\in\mathcal{O}(X)$ con $V\subseteq U$ y $s\in PU$. Si $x\in V$ entonces $\germ_{x}s=\germ_{x}s|^{U}_{V}$.
@@ -58,3 +60,24 @@ El siguiente lema, que será utilizado más adelante, nos muestra que el germen 
    $$
    Luego $s\sim_{x}s|^{U}_{V}$, de modo que las respectivas clases de equivalencia son iguales, es decir, $\germ_{x}s=\germ_{x}s|^{U}_{V}$.
 \end{proof}
+Al pasar al cociente por la relación de equivalencia de ``tener el mismo germen", obtenemos el tallo (stalk en inglés) de un prehaz en un punto dado:
+\begin{Def}
+   Sean $P\in\PreSh(X)$ y $x\in X$. Al conjunto cociente
+   $$
+   P_{x}:=\PSu(x)/\sim_{x}=\left\lbrace \Pgerm_{x}s\mid (U,s)\in\PSu(x)\right\rbrace
+   $$
+   lo llamamos el tallo de $P$ en $x$.
+\end{Def}
+Los tallos de un prehaz no son necesariamente disyuntos; ello lo muestra el siguiente ejemplo:
+\begin{Ejm}
+   Tomemos $X=\left\lbrace a,b\right\rbrace$ (con $a\neq b$) dotado con la topología trivial $\tau=\left\lbrace \phi,X\right\rbrace$, $C$ el haz de funciones continuas sobre $\mathbb{R}$ y $f:X\to \mathbb{R}$ la función constante en $0$ ($f(a)=f(b)=0$). Las únicas funciones continuas de $X$ en $\mathbb{R}$ son las constantes, es decir $CX=\left\lbrace g:X\to\mathbb{R}\mid g(a)=f(a)\right\rbrace$. Notemos que
+   $$
+   \begin{aligned}
+      \Su(a)&=\left\lbrace (U,g)\mid a\in U\subseteqab X;g\in CU\right\rbrace\\
+            &=\left\lbrace (X,g)\mid g:X\to\mathbb{R} \text{ es continua}\right\rbrace\\
+            &=\left\lbrace (X,g)\mid g(a)=g(b)\right\rbrace;\\
+   \end{aligned}
+   $$
+   del mismo modo se llega a $\Su(b)=\left\lbrace (X,g)\mid g(a)=g(b)\right\rbrace$, y por tanto $\Su(a)=\Su(b)$. Sea $(X,g)\in\germ_{a}f$. Entonces $(X,g)\in\Su(a)=\Su(b)$ y $(X,g)\sim_{a}(X,f)$ y por tanto existe $W\subseteqab X$ tal que $a\in W\subseteqab X$ y $g|^{X}_{W}=f|^{X}_{W}$; pero como el único abierto no vacío de $X$ es $X$, tenemos $W=X$ y $f=f|^{X}_{X}=g|^{X}_{X}=g$. De este modo $\germ_{a}f=\left\lbrace (X,f)\right\rbrace$. Análogamente se llega a $\germ_{b}f=\left\lbrace (X,f)\right\rbrace$. Con lo anterior, $\germ_{a}f\in C_{a}\cap C_{b}$, esto es, $C_a$ y $C_b$ no son disyuntos para $a\neq b$. Por lo tanto los tallos del haz $C$ no son disyuntos.
+\end{Ejm}
+
