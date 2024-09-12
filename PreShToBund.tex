@@ -42,7 +42,7 @@ En las dos anteriores definiciones, si es claro el prehaz $P$ con el que se est�
    Por tanto, $(T,r)\sim_{x} (V,t)$ y $\sim_{x}$ es transitiva. Obtenemos que $\sim_{x}$ es una relación de equivalencia en $\Su(x)$.
 \end{proof}
 Ahora consideramos las clases de equivalencia generadas por la relación de tener el mismo germen en un punto:
-\begin{Def}
+\begin{Def}[Germen en un punto]
    Sean $P\in \PreSh(X)$ y $x\in X$. Para cada $(U,s)\in \Su(x)$, la clase de equivalencia de $(U,s)$ respecto a $\sim_{P,x}$ se denota por $\Pgerm_{x}s_{U}$, y la llamamos el germen de $(U,s)$ en $x$.
 \end{Def}
 Nuevamente, si por el contexto es claro con qué prehaz estamos trabajando, puede omitirse el ``$P-$" en la anterior definición.
@@ -61,7 +61,7 @@ El siguiente lema, que será utilizado más adelante, nos muestra que el germen 
    Luego $(s,U)\sim_{x}(s|^{U}_{V},V)$, de modo que las respectivas clases de equivalencia son iguales, es decir, $\germ_{x}s_{U}=\germ_{x}(s|^{U}_{V})_{V}$.
 \end{proof}
 Al pasar al cociente por la relación de equivalencia de ``tener el mismo germen", obtenemos el tallo (stalk en inglés) de un prehaz en un punto dado:
-\begin{Def}
+\begin{Def}[Tallo en un punto]
    Sean $P\in\PreSh(X)$ y $x\in X$. Al conjunto cociente
    $$
    P_{x}:=\PSu(x)/\sim_{x}=\left\lbrace \Pgerm_{x}s_{U}\mid (U,s)\in\PSu(x)\right\rbrace
@@ -91,3 +91,22 @@ Nos interesa forzar a los tallos de un prehaz a que tengan intersección vacía;
    \end{aligned}
    $$
 \end{Def}
+Queremos obtener por cada prehaz sobre $X$ un manojo sobre $X$; el conjunto $\Lambda_P$ es el primer paso para esto; ahora definimos una función de dicho conjunto en $X$:
+\begin{Def}
+   Sea $P\in\PreSh(X)$. Definimos la función $\mathfrak{p}:\Lambda_P\to X$ mediante $\mathfrak{p}(\Pgerm_{x}s_{U},x)=x$ para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$, y la llamamos la función canónica de $\Lambda_P$ en $X$. 
+\end{Def}
+Para que $\mathfrak{p}$ represente un manojo sobre $X$, debemos dotar a $\Lambda_P$ de una topología; con este fin introducimos una nueva familia de funciones:
+\begin{Def}
+   Para cualesquiera $U\in\mathcal{O}(X)$ y $s\in PU$, definimos la función $\dot{s}:U\to\Lambda_P$ mediante $\dot{s}(x)=(\Pgerm_{x}s_{U},x)$ para cada $x\in U$.
+\end{Def}
+Para cada función $\dot{s}$, el siguiente diagrama en $\Set$ es conmutativo:
+   \input{Diagramas/Diag22.tex}
+Este diagrama nos recuerda las secciones transversales sobre un manojo. Deseamos que la topología que asignemos a $\Lambda_P$ haga de cada función $\dot{s}$ una sección transversal sobre $\mathfrak{p}$.
+\begin{Prop}
+   Sea $P\in\PreSh(X)$. El conjunto
+   $$
+      \mathcal{B}_{\Lambda_P}:=\left\lbrace \dot{s}(U)\mid U\in\mathcal{O}(X);s\in PU\right\rbrace
+   $$
+   es base para una topología sobre $\Lambda_P$.
+\end{Prop}
+
