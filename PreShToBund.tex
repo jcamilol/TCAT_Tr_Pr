@@ -41,3 +41,20 @@ En las dos anteriores definiciones, si es claro el prehaz $P$ con el que se est�
    $$
    Por tanto, $(T,r)\sim_{x} (V,t)$ y $\sim_{x}$ es transitiva. Obtenemos que $\sim_{x}$ es una relación de equivalencia en $\Su(x)$.
 \end{proof}
+Ahora consideramos las clases de equivalencia generadas por la relación de tener el mismo germen en un punto:
+\begin{Def}
+   Sean $P\in \PreSh(X)$ y $x\in X$. Para cada $(U,s)\in \Su(x)$, la clase de equivalencia de $(U,s)$ respecto a $\sim_{P,x}$ se denota por $\Pgerm_{x}s$, y la llamamos el germen de $(U,s)$ en $x$.
+\end{Def}
+El siguiente lema, que será utilizado más adelante, nos muestra que el germen de un elemento se conserva bajo restricciones; propiedad que en efecto concuerda con la intuición desarrollada hasta el momento.
+\begin{Lema}
+   Sean $P\in\PreSh(X)$ y $U,V\in\mathcal{O}(X)$ con $V\subseteq U$ y $s\in PU$. Si $x\in V$ entonces $\germ_{x}s=\germ_{x}s|^{U}_{V}$.
+\end{Lema}
+\begin{proof}
+   Supongamos que $x\in V$; en particular $x\in V\subseteq U\cap V$. Tenemos los diagramas (izquierda en $\mathcal{O}(X)$ y derecha en $\Set$):
+   \input{Diagramas/Diag21.tex}
+   Como $V\subseteq V$ es la flecha identidad de $V$, y $P$ es en particular un funtor, entonces $P(V\subseteq V)$ es la flecha identidad de $PV$; como $s\in PU$ entonces $P(U\subseteq V)(s)=s|^{U}_{V}\in PV$, luego 
+   $$
+   s|^{U}_{V}=P(V\subseteq V)(s|^{U}_{V})=(s|^{U}_{V})|^{V}_{V}.
+   $$
+   Luego $s\sim_{x}s|^{U}_{V}$, de modo que las respectivas clases de equivalencia son iguales, es decir, $\germ_{x}s=\germ_{x}s|^{U}_{V}$.
+\end{proof}
