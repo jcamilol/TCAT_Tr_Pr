@@ -109,4 +109,22 @@ Este diagrama nos recuerda las secciones transversales sobre un manojo. Deseamos
    $$
    es base para una topología sobre $\Lambda_P$.
 \end{Prop}
+\begin{proof}
+   Hacemos uso de la caracterización dada en la Proposición \Ref{Prop:ConjuntoEsBase}.
+   \begin{itemize}
+      \item Veamos que $\bigcup \mathcal{B}_{\Lambda_P}=\Lambda_P$, es decir,
+      $$
+         \bigcup_{\substack{U\in\mathcal{O}(X) \\ s\in PU}}\dot{s}(U)=\Lambda_P.
+      $$
+      La contenencia $\subseteq$ es inmediata, pues $\dot{s}(U)\subseteq\Lambda_P$ para cada $U\in\mathcal{O}(X)$ y $s\in PU$. Ahora, sea $z\in\Lambda_{P}$. Existen $y\in X$ y $(V,t)\in\Su(y)$ tales que $z=(\germ_{y}t_{V},y)$. Tenemos $y\in V\in\mathcal{O}(X)$ y $t\in PV$; como $\dot{t}_{V}(y)=(\germ_{y}t_{V},y)=z$, tenemos $z\in\dot{t}(V)$; esto nos da la contenencia $\supseteq$. Obtenemos que $\Lambda_P$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$.
+   \item Ahora, sean $A,B\in\mathcal{B}_{\Lambda_P}$ y probemos que $A\cap B$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$. Existen $T,V\in\mathcal{O}(X), t\in PT y r\in PV$ tales que $A=\dot{t}(T)$ y $B=\dot{r}(V)$. Si $A\cap B=\phi$, entonces $A\cap B$ es la unión vacía de elementos de $\mathcal{B}_{\Lambda_P}$. Supongamos que $A\cap B\neq\phi$. Sea
+      $$ 
+         z\in A\cap B =\dot{t}(T)\cap\dot{r}(V)=\left\lbrace (\germ_{x}t_{T},x)\mid x\in T\right\rbrace\cap\left\lbrace (\germ_{x}r_{V},x)\mid x\in V\right\rbrace.
+      $$
+      Existe $x\in T\cap V\in \mathcal{O}(X)$ tal que $z=germ_{x}t_{T}=germ_{x}r_{V}$; de modo que $(T,t)\sim_{x}(V,r)$. Así, existe $W_{z}\in\mathcal{O}(X)$ tal que $x\in W_z\subseteq T\cap V$ y $t|^{T}_{W_z}=r|^{V}_{W_z}\in PW_{z}$. Probemos que
+      $$
+         A\cap B=\dot{t}(T)\cap\dot{r}(V)=\bigcup_{z\inA\cap B}.
+      $$
+   \end{itemize}
+\end{proof}
 
