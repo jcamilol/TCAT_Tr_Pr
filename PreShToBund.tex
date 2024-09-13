@@ -48,7 +48,7 @@ Ahora consideramos las clases de equivalencia generadas por la relación de tene
 Nuevamente, si por el contexto es claro con qué prehaz estamos trabajando, puede omitirse el ``$P-$" en la anterior definición.
 
 El siguiente lema, que será utilizado más adelante, nos muestra que el germen de un elemento se conserva bajo restricciones; propiedad que en efecto concuerda con la intuición desarrollada hasta el momento.
-\begin{Lema}
+\begin{Lema}\label{Lema:LemaAzul}
    Sean $P\in\PreSh(X)$ y $U,V\in\mathcal{O}(X)$ con $V\subseteq U$ y $s\in PU$. Si $x\in V$ entonces $\germ_{x}s_{U}=\germ_{x}(s|^{U}_{V})_{V}$.
 \end{Lema}
 \begin{proof}
@@ -87,7 +87,7 @@ Nos interesa forzar a los tallos de un prehaz a que tengan intersección vacía;
    \begin{aligned}
       \Lambda_P&:=\coprod_{x\in X}P_{x}\\
                &=\bigcup_{x\in X}(P_{x}\times\left\lbrace x\right\rbrace)\\
-               &=\left\lbrace (\Pgerm_{x}s_{U}\mid x\in X;(U,s)\in\PSu(x))\right\rbrace.
+               &=\left\lbrace (\Pgerm_{x}s_{U},x)\mid x\in X;(U,s)\in\PSu(x)\right\rbrace.
    \end{aligned}
    $$
 \end{Def}
@@ -116,15 +116,47 @@ Este diagrama nos recuerda las secciones transversales sobre un manojo. Deseamos
       $$
          \bigcup_{\substack{U\in\mathcal{O}(X) \\ s\in PU}}\dot{s}(U)=\Lambda_P.
       $$
-      La contenencia $\subseteq$ es inmediata, pues $\dot{s}(U)\subseteq\Lambda_P$ para cada $U\in\mathcal{O}(X)$ y $s\in PU$. Ahora, sea $z\in\Lambda_{P}$. Existen $y\in X$ y $(V,t)\in\Su(y)$ tales que $z=(\germ_{y}t_{V},y)$. Tenemos $y\in V\in\mathcal{O}(X)$ y $t\in PV$; como $\dot{t}_{V}(y)=(\germ_{y}t_{V},y)=z$, tenemos $z\in\dot{t}(V)$; esto nos da la contenencia $\supseteq$. Obtenemos que $\Lambda_P$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$.
-   \item Ahora, sean $A,B\in\mathcal{B}_{\Lambda_P}$ y probemos que $A\cap B$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$. Existen $T,V\in\mathcal{O}(X), t\in PT y r\in PV$ tales que $A=\dot{t}(T)$ y $B=\dot{r}(V)$. Si $A\cap B=\phi$, entonces $A\cap B$ es la unión vacía de elementos de $\mathcal{B}_{\Lambda_P}$. Supongamos que $A\cap B\neq\phi$. Sea
+      La contenencia $\subseteq$ es inmediata, pues $\dot{s}(U)\subseteq\Lambda_P$ para cada $U\in\mathcal{O}(X)$ y $s\in PU$. Ahora, sea $z\in\Lambda_{P}$. Existen $y\in X$ y $(V,t)\in\Su(y)$ tales que $z=(\germ_{y}t_{V},y)$. Tenemos $y\in V\in\mathcal{O}(X)$ y $t\in PV$; como $\dot{t}_{V}(y)=(\germ_{y}t_{V},y)=z$, tenemos $z\in\dot{t}(V)\subseteq\bigcup{\dot{s}(U)}$; esto nos da la contenencia $\supseteq$. Obtenemos que $\Lambda_P$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$.
+   \item Ahora, sean $A,B\in\mathcal{B}_{\Lambda_P}$ y probemos que $A\cap B$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$. Existen $T,V\in\mathcal{O}(X), t\in PT$ y $r\in PV$ tales que $A=\dot{t}(T)$ y $B=\dot{r}(V)$. Si $A\cap B=\phi$, entonces $A\cap B$ es la unión vacía de elementos de $\mathcal{B}_{\Lambda_P}$. Supongamos que $A\cap B\neq\phi$. Dado
       $$ 
-         z\in A\cap B =\dot{t}(T)\cap\dot{r}(V)=\left\lbrace (\germ_{x}t_{T},x)\mid x\in T\right\rbrace\cap\left\lbrace (\germ_{x}r_{V},x)\mid x\in V\right\rbrace.
+         z\in A\cap B =\dot{t}(T)\cap\dot{r}(V)=\left\lbrace (\germ_{x}t_{T},x)\mid x\in T\right\rbrace\cap\left\lbrace (\germ_{x}r_{V},x)\mid x\in V\right\rbrace,
       $$
-      Existe $x\in T\cap V\in \mathcal{O}(X)$ tal que $z=germ_{x}t_{T}=germ_{x}r_{V}$; de modo que $(T,t)\sim_{x}(V,r)$. Así, existe $W_{z}\in\mathcal{O}(X)$ tal que $x\in W_z\subseteq T\cap V$ y $t|^{T}_{W_z}=r|^{V}_{W_z}\in PW_{z}$. Probemos que
+      existe $x\in T\cap V\in \mathcal{O}(X)$ tal que $z=(germ_{x}t_{T},x)=(germ_{x}r_{V},x)$; luego $germ_{x}t_{T}=germ_{x}r_{V}$ y $(T,t)\sim_{x}(V,r)$. Así, existe $W_{z}\in\mathcal{O}(X)$ tal que $x\in W_z\subseteq T\cap V$ y $t|^{T}_{W_z}=r|^{V}_{W_z}\in PW_{z}$. Probemos que
       $$
-         A\cap B=\dot{t}(T)\cap\dot{r}(V)=\bigcup_{z\inA\cap B}.
+         A\cap B=\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z).
       $$
+      \begin{itemize}
+         \item[($\subseteq$)] Sea $\omega\in A\cap B$. Existe $x\in W_{\omega}$ tal que $\omega=(\germ_{x}t_{T},x)$. Como, por el Lema \Ref{Lema:LemaAzul} se tiene $\germ_{x}t_{T}=\germ_{x}(t|^{T}_{W_{\omega}})_{W_{\omega}}$, entonces
+            $$
+            \begin{aligned}
+               \omega&=(\germ_{x}t_{T},x)\\
+                     &=(\germ_{x}(t|^{T}_{W_{\omega}})_{W_{\omega}},x)\\
+                     &=\dot{(t|^{T}_{W_{\omega}})}_{W_{\omega}}(x)
+            \end{aligned}
+            $$
+            con $x\in W_{\omega}$; así, 
+            $$
+               \omega\in\dot{(t|^{T}_{W_\omega})}(W_\omega)
+            $$
+            con $\omega\in A\cap B$, luego
+            $$
+               \omega\in\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z),
+            $$
+            y con esto,
+            $$
+            A\cap B\subseteq\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z).
+            $$
+         \item[($\supseteq$)] Sea $y\in \bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z)$. Existe $\omega\in A\cap B$ tal que $y\in\dot{(t|^{T}_{W_\omega})}(W_\omega)$, de modo que existe $x\in W_{\omega}$ tal que $y=\dot{(t|^{T}_{W_\omega})}(x)=(\germ_{x}(t|^{T}_{W_\omega}),x)$ con $W_\omega\subseteq T\cap V$ y $t|^{T}_{W_\omega}=r|^{V}_{W_\omega}$, con lo cual $(T,t)\sim_{x}(V,r)$ y $\germ_{x}t_{T}=\germ_{x}r_{V}$. Como $\germ_{x}t_{T}=germ_{x}(t|^{T}_{W_\omega})_{W_\omega}$, tenemos
+            $$
+            \begin{aligned}
+               y&=(\germ_{x}(t|^{T}_{W_\omega})_{W_\omega},x)\\
+                &=(\germ_{x}t_{T},x)\\
+                &=(\germ_{x}r_{V},x),
+            \end{aligned}
+            $$
+            es decir $y=\dot{t}(x)=\dot{r}(x)$ con $x\in W_{\omega}\subseteq T\cap V$, de modo que $y\in\dot{t}(T)\cap\dot{r}(V)=A\cap B$. Obtenemos $\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z)\subseteq A\cap B$.
+      \end{itemize}
+      Así, $A\cap B=\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z)$, y para cada $z\in A\cap B$, $\dot{(t|^{T}_{W_z})}(W_z)\in\mathcal{B}_{\Lambda_P}$; es decir, la intersección de dos elementos de $\Lambda_P$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$. Concluimos que $\mathcal{B}_{\Lambda_P}$ es base para una topología sobre $\Lambda_P$.
    \end{itemize}
 \end{proof}
 
