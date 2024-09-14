@@ -180,3 +180,13 @@ Las siguientes proposiciones nos muestran, respectivamente, que hemos logrado ob
    \end{itemize}
    Notemos que $\dot{(t|^{V}_{U\cap V})}(U\cap V)\in\mathcal{B}_{\Lambda_P}$, luego $\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteqab \Lambda_P$. Como $z\in\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteq \mathfrak{p}^{-1}(U)$, hemos probado que $\mathfrak{p}^{-1}(U)\subseteqab \Lambda_P$. Concluimos que $\mathfrak{p}:\Lambda_P\to X$ es una función continua. 
 \end{proof}
+\begin{Prop}
+   Sea $P\in \PreSh(X)$. Para cada $U\in\mathcal{O}(X)$ y cada $s\in PU$ se tiene que la función $\dot{s}:U\to \Lambda_P$ es continua. Además $\mathfrak{p}\circ\dot{s}=\iota_{U,X}$.
+\end{Prop}
+\begin{proof}
+   Sean $U\in\mathcal{O}(X)$ y $s\in PU$ cualesquiera. Veamos que $\dot{s}:U\to\Lambda_P$ devuelve abiertos de $\Lambda_P$ en abiertos de $U$ por la imagen recíproca. Sea $\omega\subseteqab \Lambda_P$. Existen $\left\lbrace V_i\right\rbrace_{i\in I}$ familia de abiertos de $X$ y $\left\lbrace t_i\right\rbrace_{i\in I}$ con $t_i\in PV_i$ para cada $i\in I$, tales que $\omega=\bigcup_{i\in I}\dot{t_i}(V_i)$. Ahora, sea $x\in\dot{s}^{-1}(\omega)$, y probemos que $x$ tiene una vecindad abierta (en $X$) contenida en $\dot{s}^{-1}(\omega)$. Tenemos $\dot{s}(x)\in\omega=\bigcup_{i\in I}\dot{(t_i)}(V_i)$, de modo que existe $j\in J$ tal que $\dot{s}(x)\in\dot{(t_{j})}(V_j)$, luego, existe $y\in V_j$ tal que $\dot{s}(x)=\dot{(t_j)}(y)$, es decir, $(\germ_{x}s_U,x)=(\germ_{y}(t_j)_{V_j},y)$; así $x=y$, y, $x\in U\cap V$ y $\germ_{x}s_{U}=\germ_{x}(t_j)_{V_j}$, luego $(U,s)\sim_{x}(V_j,t_j)$, es decir, existe $W\in\mathcal{O}(X)$ con $x\in W\subseteq U\cap V_j$ tal que $s|^{U}_{W}=t|^{V_j}_{W}$. Tomemos $a\in W$. Inmediatamente tenemos $(U,s)\sim_{a}(V_j,t_j)$, es decir, $\germ_{a}s_{U}=\germ_{a}(T_j)_{V_j}$ y $\dot{s}(a)=\dot{(t_j)}(a)$ con $a\in V_j$, luego $\dot{s}(a)\in\dot{(t_j)}(V_j)$ con $j\in I$, así que $\dot{s}(a)\in\bigcup_{i\in I}\dot{(t_i)}=\omega$, y $a\in\dot{s}^{-1}(\omega)$. Así $W\subseteq\dot{s}^{-1}(\omega)$, con $W\subseteqab X$ y $W\subseteq U$, es decir, $W\subseteqab U$, y $x\in W$. Esto prueba que $\dot{s}^{-1}(\omega)\subseteqab U$, y por tanto, que $\dot{s}:U\to\Lambda_P$ es continua. Además, dado $u\in U$ se tiene
+   $$
+      (\mathfrak{p}\circ\dot{s})(u)=\mathfrak{p}(\dot{s}(u))=\mathfrak{p}(\germ_{u}s_{U},u)=u=\iota_{U,X}(u).
+   $$
+   Por tanto $\mathfrak{p}\circ \dot{s}=\iota_{U,X}$.
+\end{proof}
