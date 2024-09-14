@@ -159,4 +159,24 @@ Este diagrama nos recuerda las secciones transversales sobre un manojo. Deseamos
       Así, $A\cap B=\bigcup_{z\in A\cap B}\dot{(t|^{T}_{W_z})}(W_z)$, y para cada $z\in A\cap B$, $\dot{(t|^{T}_{W_z})}(W_z)\in\mathcal{B}_{\Lambda_P}$; es decir, la intersección de dos elementos de $\Lambda_P$ es unión de elementos de $\mathcal{B}_{\Lambda_P}$. Concluimos que $\mathcal{B}_{\Lambda_P}$ es base para una topología sobre $\Lambda_P$.
    \end{itemize}
 \end{proof}
+Teniendo en cuenta la anterior proposición, a partir de ahora consideramos, para cada prehaz $P$ sobre $X$, a $\Lambda_P$ como espacio topológico, con la topología generada por $\mathcal{B}_{\Lambda_{P}}$ (es decir, aquella que tiene por conjuntos abiertos todas las uniones arbitrarias de elementos de $\mathcal{B}_{\Lambda_P}$). Igualmente, cada $U\in\mathcal{O}(X)$ se considera con la topología de subespacio heredada de $X$.
 
+Las siguientes proposiciones nos muestran, respectivamente, que hemos logrado obtener, con $(\Lambda_{P},\mathfrak{p})$, un manojo sobre $X$ para cada $P\in\PreSh(X)$, y que hemos cumplido nuestro propósito de que cada función del tipo $\dot{s}$ sea una sección transversal sobre $\mathfrak{p}$.
+\begin{Prop}
+   Sea $P\in\PreSh(X)$. La función $\mathfrak{p}:\Lambda_P\to X$ es continua. 
+\end{Prop}
+\begin{proof}
+   Probemos que $\mathfrak{p}$ devuelve abiertos de $X$ en abiertos de $\Lambda_P$ por la imagen inversa. Sean $U\subseteqab X$ y $z\in\mathfrak{p}^{-1}(U)\subseteq \Lambda$. Por la definición de $\Lambda_P$, existen $x\in X$ y $(V,t)\in\Su(x)$ (i.e. $x\in V\subseteqab X$ y $t\in PV$), tales que $z=(\germ_{x}t_{V},x)$; así, $x=\mathfrak{p}(z)\in U$ y $x\in U\cap V$.
+   \begin{itemize}
+      \item Probemos $z\in\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteq\mathfrak{p}^{-1}(U)$. Como $x\in U\cap V$ y
+         $$
+         \begin{aligned}
+            \dot{(t|^{V}_{U\cap V})}(x)&=(\germ_{x}(t|^{V}_{U\cap V})_{U\cap V},x)\\
+                                       &=(\germ_{x}t_{V},x)\\
+                                       &=z,
+         \end{aligned}
+         $$
+         luego $z\in\dot{(t|^{V}_{U\cap V})}(U\cap V)$. Ahora, sea $w\in\dot{(t|^{V}_{U\cap V})}(U\cap V)$. Existe $y\in U\cap V$ tal que $w=\dot{(t|^{V}_{U\cap V})}(y)=(\germ_{y}(t|^{V}_{U\cap V})_{U\cap V},y)=(\germ_{y}t_{V},y)$, luego $\mathfrak{p}(w)=\mathfrak{p}(\germ_{y}t_{V},y)=y$, con $y\in U$, de modo que $w\in\mathfrak{p}^{-1}(U)$. Así, $\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteq \mathfrak{p}^{-1}(U)$.
+   \end{itemize}
+   Notemos que $\dot{(t|^{V}_{U\cap V})}(U\cap V)\in\mathcal{B}_{\Lambda_P}$, luego $\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteqab \Lambda_P$. Como $z\in\dot{(t|^{V}_{U\cap V})}(U\cap V)\subseteq \mathfrak{p}^{-1}(U)$, hemos probado que $\mathfrak{p}^{-1}(U)\subseteqab \Lambda_P$. Concluimos que $\mathfrak{p}:\Lambda_P\to X$ es una función continua. 
+\end{proof}
