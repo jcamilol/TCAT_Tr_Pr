@@ -190,3 +190,47 @@ Las siguientes proposiciones nos muestran, respectivamente, que hemos logrado ob
    $$
    Por tanto $\mathfrak{p}\circ \dot{s}=\iota_{U,X}$.
 \end{proof}
+\begin{Def}[Manojo de gérmenes]
+   Dado $P\in \PreSh(X)$, llamamos a $(\Lambda_P,\mathfrak{p})$ el manojo de gérmenes de $P$ sobre $X$.
+\end{Def}
+Ahora probamos que $\mathfrak{p}$, aun más que una función continua, es un homeomorfismo local sobre $X$, y que por tanto $\Lambda_P$ es un espacio étalé sobre $X$:
+\begin{Lema}
+   Sean $P\in\PreSh(X)$, $U\in \mathcal{O}(X)$ y $s\in PU$. La función $\dot{s}:U\to \dot{s}(U)\subseteq\Lambda_P$ es abierta, inyectiva y tiene a $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}$ como inversa bilátera. 
+\end{Lema}
+\begin{proof}
+   \begin{itemize}
+      \item La propiedad de ser abierta de $\dot{s}$ se sigue directamente de la definición de la topología de $\Lambda_P$.
+      \item Dados $x,y\in U$, si $\dot{s}(x)=\dot{s}(y)$ entonces $(\germ_{x}s_{U},x)=(\germ_{y}s_{U},y)$ y $x=y$. Por tanto $\dot{s}$ es inyectiva.
+      \item Dado $y\in \dot{s}(U)$, se tiene $y=\dot{s}(x)=((\germ_{x}s_{U}),x)$ para algún $x\in U$. Entonces $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}(y)=\mathfrak{p}(\germ_{x}s_{U},x)=x\in U$. Por tanto $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}$ es una función sobreyectiva de $\dot{s}(U)$ en $U$.
+         \input{Diagramas/Diag23.tex}
+         Dado $x\in U$ se tiene
+         $$
+         \begin{aligned}
+            \mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}(\dot{s}(x))&=\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}(\germ_{x}s_{U},x)\\
+                                                              &=x\\
+                                                              &=1_{U}(x),
+         \end{aligned}
+         $$
+         así que $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}\circ \dot{s}=1_{U}$. Dado $z\in\dot{s}(U)$, existe $w\in U$ tal que $z=\dot{s}(w)=(\germ_{w}s_{U},w)$; entonces
+         $$
+         \begin{aligned}
+            \dot{s}(\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}(\germ_{w}s_{U},w))&=\dot{s}(w)\\
+                                                                             &=w\\
+                                                                             &=1_{\dot{s}(U)}(y),
+         \end{aligned}
+         $$
+         luego $\dot{s}\circ\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}=1_{\dot{s}(U)}$. Obtenemos que $\dot{s}:U\to\dot{s}(U)$ tiene a $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}$ como inversa bilátera.
+   \end{itemize}
+\end{proof}
+\begin{Cor}
+   Sea $P\in\PreSh(X)$. El manojo $\mathfrak{p}:\Lambda_P\to X$ es un homeomorfismo local.
+\end{Cor}
+\begin{proof}
+   Sea $z\in\Lambda_P$. Existen $x\in X$ y $(U,s)\in\Su(x) (U\in\mathcal{O}(X),x\in U,s\in PU)$ tales que $z=(\germ_{x}s_{U},x)$.
+   \begin{itemize}
+      \item Tenemos $\dot{s}(U)\subseteqab \Lambda_P$, y como $x\in U$ y $\dot{s}(x)=(\germ_{x}s_{U},x)=z$; entonces $z\in\dot{s}(U)$.
+      \item $\mathfrak{p}(\dot{s}(U))=\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}(\dot{s}(U))=U\subseteqab X$.
+      \item Como $\mathfrak{p}$ es continua, su restricción $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}$ es continua, y ésta tiene por inversa a la función continua $\dot{s}(U)$. Por tanto $\mathfrak{p}|^{\Lambda_P}_{\dot{s}(U)}:\dot{s}(U)\to U$ es un homeomorfismo.
+      Obtenemos que $\mathfrak{p}:\Lambda_P\to X$ es un homeomorfismo local.
+   \end{itemize}
+\end{proof}
