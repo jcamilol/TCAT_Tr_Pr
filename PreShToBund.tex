@@ -1,5 +1,7 @@
 En esta sección construimos y estudiamos un funtor $\Lambda$ de la categoría $\PreSh(X)$ de prehaces sobre $X$ en la categoría $\Top /X$ de manojos sobre $X$.
 
+\subsection{Suelos, gérmenes y tallos}
+
 Iniciamos definiendo el ``suelo" de un elemento de $X$ respecto a un prehaz sobre $X$:
 \begin{Def}[$P$-suelo de $x$]
    Dados $x\in X$ y $P\in \PreSh(X)$, definimos el ``P-suelo de $x$" (denotado como $\PSu (x)$) como el conjunto $\left\lbrace (U,s)\mid x\in U\in \mathcal{O}(X); s\in PU\right\rbrace$
@@ -80,6 +82,7 @@ Los tallos de un prehaz no son necesariamente disyuntos; ello lo muestra el sigu
    $$
    del mismo modo se llega a $\Su(b)=\left\lbrace (X,g)\mid g(a)=g(b)\right\rbrace$, y por tanto $\Su(a)=\Su(b)$. Sea $(X,g)\in\germ_{a}f_{X}$. Entonces $(X,g)\in\Su(a)=\Su(b)$ y $(X,g)\sim_{a}(X,f)$ y por tanto existe $W\subseteqab X$ tal que $a\in W\subseteqab X$ y $g|^{X}_{W}=f|^{X}_{W}$; pero como el único abierto no vacío de $X$ es $X$, tenemos $W=X$ y $f=f|^{X}_{X}=g|^{X}_{X}=g$. De este modo $\germ_{a}f_{X}=\left\lbrace (X,f)\right\rbrace$. Análogamente se llega a $\germ_{b}f_{X}=\left\lbrace (X,f)\right\rbrace$. Con lo anterior, $\germ_{a}f_{X}\in C_{a}\cap C_{b}$, esto es, $C_a$ y $C_b$ no son disyuntos para $a\neq b$. Por lo tanto los tallos del haz $C$ no son disyuntos.
 \end{Ejm}
+\subsection{El manojo $(\Lambda_P,\mathfrak{p})$}
 Nos interesa forzar a los tallos de un prehaz a que tengan intersección vacía; para esto tomamos su unión disyunta (que resulta ser el coproducto de los tallos en la categoría $\Set$):
 \begin{Def}
    Sea $P\in\PreSh(X)$. Denotamos por $\Lambda_P$ a la unión disyunta de los tallos de $P$ en los elementos de $X$:
@@ -234,3 +237,19 @@ Ahora probamos que $\mathfrak{p}$, aun más que una función continua, es un hom
       Obtenemos que $\mathfrak{p}:\Lambda_P\to X$ es un homeomorfismo local.
    \end{itemize}
 \end{proof}
+
+\subsection{El funtor $\Lambda$}
+Como hemos resaltado, obtenemos el manojo $\Lambda_P$ sobre $X$, por cada prehaz $P$ sobre $X$. Nuestro deseo es que esta asignación en objetos nos produzca un funtor $\Lambda:\PreSh(X)\to\Top/X$; surge la pregunta de qué flecha de $\Top/X$ asignar a una flecha $h:P\dot{\to} Q$ en $\PreSh(X)$.
+
+Sea $h:P\dot{\to}Q$ una transformación natural entre prehaces sobre $X$; queremos definir $\Lambda_h:\Lambda_{P}\to\Lambda_{Q}$, de modo que $\Lambda_h$ sea una función continua, y que $\mathfrak{q}\circ\Lambda_h=\mathfrak{p}$, es decir, que el siguiente diagrama en $\Top$ conmute:
+\input{Diagramas/Diag24.tex}
+Recordemos que 
+$$
+   \Lambda_P=\left\lbrace (\Pgerm_{x}s_{U},x)\mid x\in U\subseteqab X, s\in PU\right\rbrace
+$$
+y
+$$
+   \Lambda_Q=\left\lbrace (\Qgerm_{x}s_{U},x)\mid x\in U\subseteqab X, s\in QU\right\rbrace.
+$$
+Podría pensarse $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}s_{U},x)$ (para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$) como una asignación natural; sin embargo, el no uso de la transformación natural $h$ genera dudas. Otro camino que puede pensarse es el siguiente: dado $(\Pgerm_{x}s_{U},x)\in \Lambda_P$, como $U\in\mathcal{O}(X)$ y $h:\Lambda_P\dot{\to}\Lambda_Q$ es una transformación natural entre los funtores $\Lambda_P,\Lambda_Q:\mathcal{O}(X)^{\text{op}}\to\Set$, tenemos la función de conjuntos $h_{U}:PU\to QU$; como $s\in PU$ entonces $h_{U}s\in QU$, y $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}(h_{U}s)_{U},x)$ (para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$) nos sugiere otra definición de $\Lambda_h$. Como la anterior función trabaja con clases de equivalencia (los gérmenes sobre cada punto), debemos garantizar que está bien definida. 
+
