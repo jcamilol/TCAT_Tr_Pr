@@ -252,4 +252,22 @@ $$
    \Lambda_Q=\left\lbrace (\Qgerm_{x}s_{U},x)\mid x\in U\subseteqab X, s\in QU\right\rbrace.
 $$
 Podría pensarse $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}s_{U},x)$ (para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$) como una asignación natural; sin embargo, el no uso de la transformación natural $h$ genera dudas. Otro camino que puede pensarse es el siguiente: dado $(\Pgerm_{x}s_{U},x)\in \Lambda_P$, como $U\in\mathcal{O}(X)$ y $h:\Lambda_P\dot{\to}\Lambda_Q$ es una transformación natural entre los funtores $\Lambda_P,\Lambda_Q:\mathcal{O}(X)^{\text{op}}\to\Set$, tenemos la función de conjuntos $h_{U}:PU\to QU$; como $s\in PU$ entonces $h_{U}s\in QU$, y $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}(h_{U}s)_{U},x)$ (para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$) nos sugiere otra definición de $\Lambda_h$. Como la anterior función trabaja con clases de equivalencia (los gérmenes sobre cada punto), debemos garantizar que está bien definida. 
+\begin{itemize}
+   \item Sean $x\in X; (U,s),(V,t)\in\PSu(X)$. Supongamos $\Pgerm_{x}s_{U}=\Pgerm_{x}t_{V}$ y garanticemos $\Qgerm_{x}(h_{U}s)_{U}=\Qgerm_{x}(h_{V}t)_{V}$. Tenemos $(U,s)\sim_{P,x}(V,t)$, luego existe $W\subseteqab X$ tal que $W\subseteq U$ y $W\subseteq V$, con $x\in W$, y además $s|^{U}_{W}=t|^{V}_{W}$. Tenemos en $\mathcal{O}(X)$ el diagrama
+      \input{Diagramas/Diag25.tex}
+      Como $h:P\dot{\to} Q$ es una transformación natural, tenemos en $\Set$ el siguiente diagrama conmutativo:
+      \input{Diagramas/Diag26.tex}
+      Como $s\in PU, t\in PV$ y $s|^{U}_{W}=t|^{V}_{W}$, siguiendo en anterior diagrama vemos que:
+      $$
+         (h_{U}s)|^{U}_{W}=h_{W}(s|^{U}_{W})=h_{W}(t|^{V}_{W})=(h_{V}t)|^{V}_{W},
+      $$
+      de modo que $(U,h_{U}s)\sim_{Q,x}(V,h_{V}t)$ y $\Qgerm_{x}(h_{U}s)_{U}=\Qgerm_{x}(h_{V}t)_{V}$. Con esto, $\Lambda_h$ está bien definida, pues dados $(\Pgerm_{x}s_{U},x),(\Pgerm_{x}t_{V},x)\in\Lambda_P$, si $(\Pgerm_{x}s_{U},x)=(\Pgerm_{x}t_{V},x)$ entonces
+      $$
+      \begin{aligned}
+         \Lambda_h(\Pgerm_{x}s_{U},x)&=(\Qgerm_{x}(h_{U}s)_{U},x)\\
+                                     &=(\Qgerm_{x}(H_{V}t)_{V},x)\\
+                                     &=\Lambda_h(\Pgerm_{x}t_{V},x).
+      \end{aligned}
+      $$
+\end{itemize}
 
