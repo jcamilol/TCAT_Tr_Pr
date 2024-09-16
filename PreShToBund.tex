@@ -270,4 +270,49 @@ Podría pensarse $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}s_{U},x)$ (para cada $
       \end{aligned}
       $$
 \end{itemize}
+Ahora veamos que $\Lambda_h$ es continua:
+\begin{itemize}
+   \item Probamos que $\Lambda_h$ es continua puntualmente. Sea $(\Pgerm_{x}s_{u},x)\in \Lambda_P$ (tenemos $x\in U\subseteqab(X), s\in PU$). Tenemos $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}(h_{U}s),x)$. Sea $\dot{t}(V)\in\mathcal{B}_{\Lambda_Q}$ una vecindad abierta básica de $(\Qgerm_{x}(h_{U}s)_{U},x)$, es decir, $V\in\mathcal{O}(X)$, $t\in QV$ y $(\Qgerm_{x}(h_{U}s)_{U},x)\in\dot{t}_{V}(V)$, con lo cual existe $y\in V$ tal que:
+      $$
+      \begin{aligned}
+         (\Qgerm_{x}(h_{U}s)_{U},x)&=\dot{t}_{V}(y)\\
+                                   &=(\Qgerm_{y}t_{V},y).
+      \end{aligned}
+      $$
+      De este modo, $x=y$, $x\in V$ y $\Qgerm_{x}(h_{U}s)_{U}=\Qgerm_{x}t_{V}$, es decir, $(U,h_{U}s)\sim_{Q,x}(V,t)$; así, existe $W\in\mathcal{O}(X)$ tal que $x\in W\subseteq U\cap V$ y $(h_{U}s)|^{U}_{W}=t|^{V}_{W}$. Como $h:P\dot{\to} Q$ es una transformación natural y $W\subseteq U$, tenemos en $\Set$ el siguiente diagrama conmutativo:
+      \input{Diagramas/Diag27.tex}
+      Como $s\in PU$,
+      $$
+      \begin{aligned}
+         h_{W}(s|^{U}_{W})&=(h_{U}s)|^{U}_{W}=t|^{V}_{W}.
+      \end{aligned}
+      $$
+      Notemos que $x\in W$ y 
+      $$
+         \dot{(s|^{U}_{W})}_{W}(x)=(\Pgerm_{x}(s|^{U}_{W})_W,x)=(\Pgerm_{x}s_{U},x),
+      $$
+      y por tanto $(\Pgerm_{x}s_{U},x)\in\dot{(s|^{U}_{W})(W)}$. Además $\Lambda_h(\Pgerm_{x}s_{U},x)=(\Qgerm_{x}(h_{U}s)_{U},x)$, con lo cual $(\Qgerm_{x}(h_{U}s)_{U},x)\in \Lambda_h(\dot{(s|^{U}_{W}})(W))$. Ahora, sea $z\in \Lambda_h(\dot{(s|^{U}_{W})}(W))$. Existe $\tilde{w}\in\dot{(s|^{U}_{W})}(W)$ tal que $z=\Lambda_h(\tilde{w})$. Existe $w\in W\subseteq V$ tal que $\tilde{w}=\dot{(s|^{U}_{W})}(w)=(\Pgerm_{w}(s|^{U}_{W}),w)$. Por ende
+      $$
+      \begin{aligned}
+         z&=\Lambda_h(\tilde{w})\\
+          &=\Lambda_h(\Pgerm_{w}(s|^{U}_{W}),w)\\
+          &=(\Qgerm_{w}(h_{W}(s|^{U}_{W}))_{W},w)\\
+          &=(\Qgerm_{w}(t|^{V}_{W})_{W},w)\\
+          &=(\Qgerm_{w}t_{V},w)\\
+          &=\dot{t}_{V}(w)
+      \end{aligned}
+      $$
+      y $w\in V$, con lo cual $z\in\dot{t}_{V}(V)$ y $\Lambda_h(\dot{(s|^{U}_{W})}(W))\subseteq \dot{t}_{V}(V)$. Como $\dot{(s|^{U}_{W})}(W)\in\mathcal{B}_{\Lambda_P}$, esto completa la prueba de que $\Lambda_h:\Lambda_P\to \Lambda_Q$ es una función continua.
+   \item Sumado a lo anterior, el siguiente diagrama conmuta:
+      \input{Diagramas/Diag24.tex}
+      pues, dado $(\Pgerm_{x}s_{U},x)\in \Lambda_P$, tenemos
+      $$
+      \begin{aligned}
+         \mathfrak{q}(\Lambda_h(\Pgerm_{x}s_{U},x))&=\mathfrak{q}(\Qgerm_{x}(h_{U}s)_{U},x)\\
+                                                   &=x\\
+                                                   &=\mathfrak{p}(\Pgerm_{x}s_{U},x),
+      \end{aligned}
+      $$
+      luego $\mathfrak{p}=\mathfrak{q}\circ\Lambda_h$.
+\end{itemize}
 
