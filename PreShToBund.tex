@@ -324,5 +324,38 @@ Hemos probado la siguiente proposición:
    es una flecha de $(\Lambda_P,\mathfrak{p})\to(\Lambda_Q,\mathfrak{q})$ en $\Top/X$.
 \end{Prop}
 
-% SIGUIENTE. PROBAR QUE $\Lambda:\PreSh(X)\to\Top/X$ ES UN FUNTOR
-
+Con la siguiente proposición alcanzamos el objetivo de la presente sección:
+\begin{Prop}
+   La función $\Lambda$ que a cada $P\in \PreSh(X)$ le asigna el manojo $\Lambda_P\in\Top/X$, y a cada $h:P\dot{\to}Q$ en $\PreSh(X)$ le asigna la flecha $\Lambda_h:\Lambda_P\to \Lambda_Q$ en $\Top/X$, es un funtor covariante de $\PreSh(X)$ en $\Top/X$.   
+\end{Prop}
+\begin{proof}
+   \begin{itemize}
+      \item Veamos que $\Lambda$ respeta identidades. Dado $P\in\PreSh(X)$, para cada $(\Pgerm_{x}s_{U},x)\in\Lambda_P$ tenemos
+         $$
+         \begin{aligned}
+            \Lambda_{1_{P}}(\Pgerm_{x}s_{U})&=(\Pgerm_{x}({(1_{P})_{U}s})_{U},x)\\
+                                            &=(\Pgerm_{x}(1_{PU}s)_{U},x)\\
+                                            &=(\Pgerm_{x}s_{U},x)\\
+                                            &=1_{\Lambda_P}(\Pgerm_{x}s_{U},x),
+         \end{aligned}
+         $$
+         y por tanto $\Lambda_{1_{P}}=1_{\Lambda_P}$.
+      \item Veamos que $\Lambda$ respeta composiciones. Supongamos que tenemos flechas y objetos de $\PreSh(X)$ en la disposición
+         \input{Diagramas/Diag28.tex}
+         y probemos que el siguiente diagrama en $\Top/X$ conmuta:
+         \input{Diagramas/Diag29.tex}
+         Dado $(\Pgerm_{x}s_{U},x)\in\Lambda_P$, tenemos
+         $$
+         \begin{aligned}
+            (\Lambda_{k}\circ \Lambda_{h})(\Pgerm_{x}s_{U},x)&=\Lambda_{k}(\Lambda_{h}(\Pgerm_{x}s_{U},x))\\
+                                                             &=\Lambda_{k}(\Qgerm_{x}(h_{U}s)_{U},x)\\
+                                                             &=(\Rgerm_{x}(k_{U}(h_{U}s))_{U},x)\\
+                                                             &=(\Rgerm_{x}((k_{U}\circ h_{U})(s))_{U},x)\\
+                                                             &=(\Rgerm_{x}((k\bullet h)_{U}(s))_{U},x)\\
+                                                             &=\Lambda_{k\bullet h}(\Pgerm_{x}s_{U},x),
+         \end{aligned}
+         $$
+         y con esto $\Lambda_{k}\circ\Lambda_{h}=\Lambda_{k\bullet h}$.
+   \end{itemize}
+   Concluimos que $\Lambda:\PreSh(X)\to\Top/X$ es un funtor.
+\end{proof}
