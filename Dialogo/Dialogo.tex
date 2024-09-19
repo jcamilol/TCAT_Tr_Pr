@@ -1,0 +1,22 @@
+En la presente sección, usamos la teoría de funtores adjuntos para probar que $\Lambda$ y $\Gamma$ determinan una adjunción, y también para, a partir de esto, derivar la equivalencia de las categorías $\Sh(X)$ y $\Etale(X)$, para cada espacio topológico $X$, que constituye nuestro objetivo. Los resultados que usemos acerca de la teoría de funtores adjuntos se presentarán sin prueba, pues su estudio no constituye directamente un propósito del presente escrito (para referencia puede visitarse \cite[Chapter~4]{CWM}, por ejemplo).
+
+\phantom{O}
+
+Buscamos aplicar el siguiente lema a las categorías $PreSh(X)$ y $\Bund(X)$, pasando a las respectivas subcategorías $\Sh(X)$ y $\Etale(X)$. Lo enunciamos directamente con nuestras categorías y funtores de interés:
+
+\begin{Lema}\label{Lema:LemaAdjuntos}
+   Supongamos que los funtores $\Lambda:PreSh(X)\to\Top/X$ y $\Gamma:\Top/X\to PreSh(X)$ son adjuntos, con unidad $\eta$ y counidad $\epsilon$ que satisfacen las siguientes condiciones:
+   \begin{itemize}
+      \item Para cada $B\in\Top/X$, $\eta_{\Gamma B}:\Gamma B \to \Gamma \Lambda \Gamma B$ es un isomorfismo.
+      \item Para cada $P\in\PreSh(X)$, $\epsilon_{\Lambda P}: \Lambda \Gamma \Lambda P \to \Lambda P$ es un isomorfismo.
+   \end{itemize}
+   Sea $\mathcal{P}_{0}$ la subcategoría plena de $\PreSh(X)$ que tiene por objetos todos aquellos $P\in\PreSh(X)$ que son isomorfos a algún $\Gamma B$. Sea $\mathcal{B}_{0}$ la subcategoría plena de $\mathcal{B}$ cuyos objetos son isomorfos a algún $\Lambda_P$. Entonces la adjunción $(\Lambda, \Gamma)$ se restringe a una equivalencia de categorías $(\Lambda_{0}, \Gamma_{0})$, como en el siguiente diagrama:
+   \input{Diagramas/Diag30.tex}
+   donde las flechas verticales son las respectivas inclusiones.
+\end{Lema}
+
+Sabemos que $\Sh(X)$ y $\Etale(X)$ son subcategorías plenas de $\PreSh(X)$ y $\Top/X$; además, en la Sección \ref{section:BundToPreSh} probamos que cada manojo $\langle Y,p\rangle$ sobre $X$ determina un haz (de secciones transversales) $\Gamma Y$ (es decir $\Gamma Y\in \Sh(X)$); igualmente en la Sección \ref{section:PreShToBund} probamos que cada prehaz $P$ sobre $X$ determina un espacio étalé $\Lambda P$ sobre $X$ (es decir, $\Lambda_P\in\Etale(X))$. Por tanto, las categorías $\Sh(X)$ y $\Etale(X)$ son apliclables al anterior lema en función de $\mathcal{P}_0$ y $\mathcal{B}_0$, respectivamente.
+\subsection{La transformación natural $\eta$}
+   \input{Dialogo/eta.tex}
+\subsection{La transformación natural $\epsilon$}
+   \input{Dialogo/epsilon.tex}
