@@ -5,8 +5,8 @@ En la presente sección, usamos la teoría de funtores adjuntos para probar que 
    de $G$ y $F$, respectivamente, donde: 
    \begin{itemize}
       \item $\eta G:G\dot{\to}GFG$ es la transformación natural que a cada $a\in A$ le asigna la flecha $\eta_{G a}$ de $B$.
-      \item $G\epsilon :GFG\dot{\to}G$ es la transformación natural que a cada $a\in A$ le asigna la flecha $G\eta_{a}:GFGa\to Ga$ en $B$.
-      \item $F \eta: F\dot{\to}FGF$ es la transformación natural que a cada $b\in B$ le asigna la flecha $F\eta_{b}:F_{b}\to FGF_{b}$ en $A$.
+      \item $G\epsilon :GFG\dot{\to}G$ es la transformación natural que a cada $a\in A$ le asigna la flecha $G\epsilon_{a}:GFGa\to Ga$ en $B$.
+      \item $F \eta: F\dot{\to}FGF$ es la transformación natural que a cada $b\in B$ le asigna la flecha $F\eta_{b}:Fb\to FGFb$ en $A$.
       \item $\epsilon F:FGF\dot{\to}F$ es la transformación natural que a cada $b\in B$ le asigna la flecha $\epsilon_{Fb}:FGFb\to Fb$ en $A$. 
    \end{itemize}
    A $\eta$ y $\epsilon$ las llamamos respectivamente la unidad y counidad de la adjunción.
@@ -22,11 +22,10 @@ En la presente sección, usamos la teoría de funtores adjuntos para probar que 
    donde las flechas verticales son las respectivas inclusiones.
 \end{Lema}
 Para poder aplicar estos teoremas a nuestros funtores de interés, comenzamos garantizando la existencia de $\eta$ y $\epsilon$ como en el Teorema \ref{Tma:TmaAdjuntos1} para $\Lambda:\PreSh(X)\to\Top/X$ y $\Gamma:\Top/X\to\PreSh(X)$.
-%Sabemos que $\Sh(X)$ y $\Etale(X)$ son subcategorías plenas de $\PreSh(X)$ y $\Top/X$; además, en la Sección \ref{section:BundToPreSh} probamos que cada manojo $\langle Y,p\rangle$ sobre $X$ determina un haz (de secciones transversales) $\Gamma Y$ (es decir $\Gamma Y\in \Sh(X)$); igualmente en la Sección \ref{section:PreShToBund} probamos que cada prehaz $P$ sobre $X$ determina un espacio étalé $\Lambda P$ sobre $X$ (es decir, $\Lambda_P\in\Etale(X))$. Por tanto, las categorías $\Sh(X)$ y $\Etale(X)$ son apliclables al anterior lema en función de $\mathcal{P}_0$ y $\mathcal{B}_0$, respectivamente. Nos falta ver que $\Lambda$ y $\Gamma$ son funtores adjuntos y que la unidad y counidad de esta adjunción satisfacen las propiedades (L1) y (L2).
 
-\subsection{La transformación natural $\eta$}
+%\subsection{La transformación natural $\eta$}
    \input{Dialogo/eta.tex}
-\subsection{La transformación natural $\epsilon$}
+%\subsection{La transformación natural $\epsilon$}
    \input{Dialogo/epsilon.tex}
-\subsection{Diálogo entre $\eta$ y $\epsilon$}
+%\subsection{Diálogo entre $\eta$ y $\epsilon$}
    \input{Dialogo/DialogoEtaEpsilon}
