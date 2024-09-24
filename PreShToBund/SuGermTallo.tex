@@ -14,7 +14,7 @@ La igualdad $s|^{U}_{W}=t|^{V}_{W}$ con $W\subseteq U\cap V$ nos recuerda la ide
 
 Notemos que la condición $W\subseteq U\cap V$ se tiene si y sólo si $W\subseteq U$ y $W\subseteq V$, y que en este caso $s|^{U}_{W}$ y $t|^{V}_{W}$ son elementos de $P(W)$, siempre que $s\in PU$ y $t\in PV$. De esta forma, podemos representar $(U,s)\sim_{P,x}(V,t)$ con el cumplimiento simultaneo de los dos siguientes diagramas:
 \input{Diagramas/Diag18.tex}
-Donde el diagrama de la izquierda está en $\mathcal{O}(X)$, el de la derecha en $Set$ y las flechas azules denotan pertenencia conjuntista.
+Donde el diagrama de la izquierda está en $\mathcal{O}(X)$, el de la derecha en $\Set$ y las flechas azules denotan pertenencia conjuntista.
 
 En las dos anteriores definiciones, si es claro el prehaz $P$ con el que se está trabajando, solemos denotar $\Su(x)$ y $\sim_{x}$ en lugar de \PSu(x) y $\sim_{P,x}$, respectivamente.
 \begin{Prop}
@@ -57,12 +57,12 @@ El siguiente lema, que será utilizado más adelante, nos muestra que el germen 
    s|^{U}_{V}=P(V\subseteq V)(s|^{U}_{V})=(s|^{U}_{V})|^{V}_{V}.
    $$
    Luego $(s,U)\sim_{x}(s|^{U}_{V},V)$, de modo que las respectivas clases de equivalencia son iguales, es decir, $\germ_{x}s_{U}=\germ_{x}(s|^{U}_{V})_{V}$.
-\end{proof}
+\end{proof}ıculos
 Al pasar al cociente por la relación de equivalencia de ``tener el mismo germen", obtenemos el tallo (stalk en inglés) de un prehaz en un punto dado:
 \begin{Def}[Tallo en un punto]
    Sean $P\in\PreSh(X)$ y $x\in X$. Al conjunto cociente
    $$
-   P_{x}:=\PSu(x)/\sim_{x}=\left\lbrace \Pgerm_{x}s_{U}\mid (U,s)\in\PSu(x)\right\rbrace
+   P_{x}:=\PSu(x)/\sim_{P,x}=\left\lbrace \Pgerm_{x}s_{U}\mid (U,s)\in\PSu(x)\right\rbrace
    $$
    lo llamamos el tallo de $P$ en $x$.
 \end{Def}
